@@ -1,0 +1,15 @@
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\DAL.dll
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\DAL.pdb
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.dll
+D:\Projects\Pj-WinformC#\Winform-3-Layers\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\DAL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\DAL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Debug\DAL.csproj.Up2Date

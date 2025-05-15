@@ -1,0 +1,452 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_edit_batch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_edit_batch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\predict.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\predict.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\predict.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\predict.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\dan_qlcuahangbanthuoc\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\dan_qlcuahangbanthuoc\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8163BFF1-1D02-4275-8E93-1FB5691B7823}|DAL\\DAL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dal\\sqldataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8163BFF1-1D02-4275-8E93-1FB5691B7823}|DAL\\DAL.csproj|solutionrelative:dal\\sqldataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\bll_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|solutionrelative:bll\\bll_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\dan_qlcuahangbanthuoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_type_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_type_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_add_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_add_medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\bll_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|solutionrelative:bll\\bll_statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\bll_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|solutionrelative:bll\\bll_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\bll_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|solutionrelative:bll\\bll_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\bll_batch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|solutionrelative:bll\\bll_batch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frm_Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Login.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:07:23.273Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frm_Login.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_Login.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:08:13.027Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frm_Main.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAgwNEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:18:42.758Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frm_medicine.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_medicine.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_medicine.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_medicine.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_medicine.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAIA1wJgAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:56:00.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "predict.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\predict.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\predict.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\predict.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\predict.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwD4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T14:38:00.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "predict.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\predict.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\predict.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\predict.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\predict.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T14:11:52.502Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frm_edit_batch.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_edit_batch.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_edit_batch.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_edit_batch.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_edit_batch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T14:11:18.845Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frm_add_supplier.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_supplier.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_supplier.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_supplier.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_supplier.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:42:19.353Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_add_customer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_customer.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_customer.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_customer.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:29:10.176Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frm_add_sale.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_sale.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_sale.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_sale.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_sale.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:35:38.429Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frm_Main.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_Main.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_Main.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:42:38.359Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frm_dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:35:49.109Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SqlDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAL\\SqlDataAccess.cs",
+              "RelativeDocumentMoniker": "DAL\\SqlDataAccess.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAL\\SqlDataAccess.cs",
+              "RelativeToolTip": "DAL\\SqlDataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:40:14.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BLL_staff.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_staff.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_staff.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_staff.cs",
+              "RelativeToolTip": "BLL\\BLL_staff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:40:45.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frm_add_type.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_type.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_type.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_type.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_type.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:35:44.67Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\Program.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\Program.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:22:07.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "frm_add_medicine.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_medicine.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_medicine.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_medicine.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_medicine.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:29:16.875Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frm_type_medicine.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_type_medicine.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_type_medicine.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_type_medicine.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_type_medicine.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:42:22.398Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frm_staff.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_staff.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_staff.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_staff.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:42:24.968Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frm_add_purchase.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_purchase.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_purchase.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_purchase.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_purchase.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:29:19.301Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frm_add_staff.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_staff.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_add_staff.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_add_staff.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_add_staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:35:42.508Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BLL_Statistic.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_Statistic.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Statistic.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_Statistic.cs",
+              "RelativeToolTip": "BLL\\BLL_Statistic.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIA3wAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:33:02.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BLL_supplier.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_supplier.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_supplier.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_supplier.cs",
+              "RelativeToolTip": "BLL\\BLL_supplier.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:40:39.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BLL_type.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_type.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_type.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_type.cs",
+              "RelativeToolTip": "BLL\\BLL_type.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:39:59.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BLL_batch.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_batch.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_batch.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL_batch.cs",
+              "RelativeToolTip": "BLL\\BLL_batch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:39:45.739Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

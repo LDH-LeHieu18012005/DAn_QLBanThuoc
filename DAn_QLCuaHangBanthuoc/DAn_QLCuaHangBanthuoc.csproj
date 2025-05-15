@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11262228-A1B5-432F-8E27-493624094596}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DAn_QLCuaHangBanthuoc</RootNamespace>
+    <AssemblyName>DAn_QLCuaHangBanthuoc</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dgvtoExcel.cs" />
+    <Compile Include="frm_add_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_customer.Designer.cs">
+      <DependentUpon>frm_add_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_medicine.Designer.cs">
+      <DependentUpon>frm_add_medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_purchase.Designer.cs">
+      <DependentUpon>frm_add_purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_sale.Designer.cs">
+      <DependentUpon>frm_add_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_staff.Designer.cs">
+      <DependentUpon>frm_add_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_supplier.Designer.cs">
+      <DependentUpon>frm_add_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_type.Designer.cs">
+      <DependentUpon>frm_add_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_customer.Designer.cs">
+      <DependentUpon>frm_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_dashboard.Designer.cs">
+      <DependentUpon>frm_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit_batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_batch.Designer.cs">
+      <DependentUpon>frm_edit_batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_medicine.Designer.cs">
+      <DependentUpon>frm_medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_purchase.Designer.cs">
+      <DependentUpon>frm_purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sale.Designer.cs">
+      <DependentUpon>frm_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_show_purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_show_purchase.Designer.cs">
+      <DependentUpon>frm_show_purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_show_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_show_sale.Designer.cs">
+      <DependentUpon>frm_show_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_staff.Designer.cs">
+      <DependentUpon>frm_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_supplier.Designer.cs">
+      <DependentUpon>frm_supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_type_medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_type_medicine.Designer.cs">
+      <DependentUpon>frm_type_medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="predict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="predict.Designer.cs">
+      <DependentUpon>predict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_add_customer.resx">
+      <DependentUpon>frm_add_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_medicine.resx">
+      <DependentUpon>frm_add_medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_purchase.resx">
+      <DependentUpon>frm_add_purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_sale.resx">
+      <DependentUpon>frm_add_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_staff.resx">
+      <DependentUpon>frm_add_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_supplier.resx">
+      <DependentUpon>frm_add_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_type.resx">
+      <DependentUpon>frm_add_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_customer.resx">
+      <DependentUpon>frm_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_dashboard.resx">
+      <DependentUpon>frm_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_batch.resx">
+      <DependentUpon>frm_edit_batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_medicine.resx">
+      <DependentUpon>frm_medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_purchase.resx">
+      <DependentUpon>frm_purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sale.resx">
+      <DependentUpon>frm_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_show_purchase.resx">
+      <DependentUpon>frm_show_purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_show_sale.resx">
+      <DependentUpon>frm_show_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_staff.resx">
+      <DependentUpon>frm_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_supplier.resx">
+      <DependentUpon>frm_supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_type_medicine.resx">
+      <DependentUpon>frm_type_medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="predict.resx">
+      <DependentUpon>predict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{66638dce-8e7c-4bc2-942e-c6f4a0c58bce}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truc2k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piggy-bankư.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piggy-bankư1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-on-investment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plu2s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Sức khỏe Biểu tượng Xanh lam Xanh lá.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
