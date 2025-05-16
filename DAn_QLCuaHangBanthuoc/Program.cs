@@ -20,6 +20,7 @@ namespace DAn_QLCuaHangBanthuoc
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new frm_Login(0));
+            //Application.Run(new predict());
         }
         // ***also dllimport of that function***
         [System.Runtime.InteropServices.DllImport("user32.dll")]

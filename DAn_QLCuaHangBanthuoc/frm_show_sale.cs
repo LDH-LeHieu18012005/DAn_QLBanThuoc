@@ -71,33 +71,98 @@ namespace DAn_QLCuaHangBanthuoc
             if (checkTT())
             {
                 Document document = new Document(PageSize.A4);
+                // Lưu tệp PDF vào thư mục MyDocuments
+                string pdfPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Invoice.pdf");
+                string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "error.log");
+
+                FileStream fs = null;
                 try
                 {
-                    PdfWriter writer = PdfWriter.GetInstance(document, new FileStream("Invoice.pdf", FileMode.Create));
+                    // Tạo tệp PDF
+                    fs = new FileStream(pdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+                    PdfWriter writer = PdfWriter.GetInstance(document, fs);
                     document.SetMargins(0, document.TopMargin, document.LeftMargin, document.BottomMargin);
                     document.Open();
+
+                    // Chụp giao diện pn_Print
                     Bitmap bmp = new Bitmap(pn_Print.Width, pn_Print.Height);
-                    btn_print.Visible = false;
-                    btn_close.Visible = false;
-                    pn_Print.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, pn_Print.Width, pn_Print.Height));
-                    btn_print.Visible = true;
-                    btn_close.Visible = true;
+                    try
+                    {
+                        btn_print.Visible = false;
+                        btn_close.Visible = false;
+                        pn_Print.Refresh(); // Đảm bảo panel được vẽ hoàn toàn
+                        pn_Print.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, pn_Print.Width, pn_Print.Height));
+
+                        // Lưu Bitmap để kiểm tra (tạm thời)
+                        string tempImagePath = Path.Combine(Path.GetTempPath(), "test_bitmap.png");
+                        bmp.Save(tempImagePath, System.Drawing.Imaging.ImageFormat.Png);
+                        File.AppendAllText(logPath, $"{DateTime.Now}: Đã lưu Bitmap tạm tại {tempImagePath}\n");
+                    }
+                    catch (Exception bmpEx)
+                    {
+                        File.AppendAllText(logPath, $"{DateTime.Now}: Lỗi khi chụp Bitmap: {bmpEx.ToString()}\n");
+                        throw;
+                    }
+                    finally
+                    {
+                        btn_print.Visible = true;
+                        btn_close.Visible = true;
+                    }
+
+                    // Thêm hình ảnh vào PDF
                     iTextSharp.text.Image pic = iTextSharp.text.Image.GetInstance(bmp, System.Drawing.Imaging.ImageFormat.Bmp);
                     pic.ScaleToFit(PageSize.A4.Width, PageSize.A4.Height);
                     pic.SetAbsolutePosition(document.Left, document.Top - pic.ScaledHeight);
                     document.Add(pic);
+
+                    // Đóng document trước khi đóng FileStream
+                    document.Close();
+                    File.AppendAllText(logPath, $"{DateTime.Now}: Đã tạo tệp PDF tại {pdfPath}\n");
+                }
+                catch (UnauthorizedAccessException uae)
+                {
+                    File.AppendAllText(logPath, $"{DateTime.Now}: Lỗi quyền truy cập: {uae.ToString()}\n");
+                    MessageBox.Show("Không có quyền ghi tệp vào thư mục. Vui lòng chạy ứng dụng với quyền quản trị viên hoặc kiểm tra quyền truy cập thư mục Documents.");
+                    return;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Đã xảy ra lỗi khi tạo PDF: " + ex.Message);
+                    File.AppendAllText(logPath, $"{DateTime.Now}: Lỗi khi tạo PDF: {ex.ToString()}\n");
+                    MessageBox.Show("Lỗi khi tạo PDF. Vui lòng kiểm tra tệp error.log trong thư mục Documents.");
+                    return;
                 }
                 finally
                 {
-                    document.Close();
-                    this.Close();
+                    // Đóng FileStream sau khi document đã được đóng
+                    fs?.Close();
+                    fs?.Dispose();
                 }
-                Process.Start("Invoice.pdf");
+
+                // Mở tệp PDF
+                try
+                {
+                    if (File.Exists(pdfPath))
+                    {
+                        File.AppendAllText(logPath, $"{DateTime.Now}: Đang mở tệp PDF: {pdfPath}\n");
+                        Process.Start(new ProcessStartInfo(pdfPath) { UseShellExecute = true });
+                    }
+                    else
+                    {
+                        File.AppendAllText(logPath, $"{DateTime.Now}: Tệp PDF không tồn tại tại {pdfPath}\n");
+                        MessageBox.Show($"Tệp {pdfPath} không được tạo. Vui lòng kiểm tra tệp error.log trong thư mục Documents.");
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    File.AppendAllText(logPath, $"{DateTime.Now}: Lỗi khi mở PDF: {ex.ToString()}\n");
+                    MessageBox.Show("Không thể mở tệp PDF: " + ex.Message);
+                    return;
+                }
+
+                // Chuyển về form bán hàng và đóng form hiện tại
                 _mainForm.container(new frm_sale(_mainForm));
+                this.Close();
             }
         }
 

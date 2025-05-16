@@ -1,0 +1,11 @@
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\BLL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\BLL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\DAL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\DAL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\bin\Release\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\obj\Release\BLL.csproj.Up2Date
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\obj\Release\BLL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\BLL\obj\Release\BLL.pdb

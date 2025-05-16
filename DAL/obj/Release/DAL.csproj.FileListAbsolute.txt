@@ -1,0 +1,9 @@
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Release\DAL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Release\DAL.pdb
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Release\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\bin\Release\Newtonsoft.Json.xml
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Release\DAL.csproj.Up2Date
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Release\DAL.dll
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAL\obj\Release\DAL.pdb
