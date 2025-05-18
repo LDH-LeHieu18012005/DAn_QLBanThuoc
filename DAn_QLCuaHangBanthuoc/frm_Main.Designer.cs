@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pn_left = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pn_control = new Guna.UI2.WinForms.Guna2Panel();
-            this.pn_main = new Guna.UI2.WinForms.Guna2Panel();
-            this.pn_top = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Staff = new Guna.UI2.WinForms.Guna2Button();
             this.btn_supplier = new Guna.UI2.WinForms.Guna2Button();
@@ -47,12 +39,21 @@
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_product = new Guna.UI2.WinForms.Guna2Button();
             this.btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pn_control = new Guna.UI2.WinForms.Guna2Panel();
+            this.pn_main = new Guna.UI2.WinForms.Guna2Panel();
+            this.pn_top = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pn_left.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pn_control.SuspendLayout();
             this.pn_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -78,97 +79,10 @@
             this.pn_left.Controls.Add(this.pn_control);
             this.pn_left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_left.Location = new System.Drawing.Point(0, 0);
-            this.pn_left.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_left.Margin = new System.Windows.Forms.Padding(4);
             this.pn_left.Name = "pn_left";
             this.pn_left.Size = new System.Drawing.Size(1733, 1046);
             this.pn_left.TabIndex = 0;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(332, 236);
-            this.guna2Panel1.TabIndex = 1;
-            // 
-            // pn_control
-            // 
-            this.pn_control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.pn_control.BorderRadius = 20;
-            this.pn_control.Controls.Add(this.pn_main);
-            this.pn_control.Controls.Add(this.pn_top);
-            this.pn_control.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_control.Location = new System.Drawing.Point(332, 0);
-            this.pn_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pn_control.Name = "pn_control";
-            this.pn_control.ShadowDecoration.BorderRadius = 10;
-            this.pn_control.Size = new System.Drawing.Size(1401, 1046);
-            this.pn_control.TabIndex = 0;
-            // 
-            // pn_main
-            // 
-            this.pn_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_main.Location = new System.Drawing.Point(0, 46);
-            this.pn_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pn_main.Name = "pn_main";
-            this.pn_main.Size = new System.Drawing.Size(1401, 1000);
-            this.pn_main.TabIndex = 1;
-            // 
-            // pn_top
-            // 
-            this.pn_top.Controls.Add(this.guna2Panel2);
-            this.pn_top.Controls.Add(this.label1);
-            this.pn_top.Controls.Add(this.btn_close);
-            this.pn_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_top.Location = new System.Drawing.Point(0, 0);
-            this.pn_top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pn_top.Name = "pn_top";
-            this.pn_top.Size = new System.Drawing.Size(1401, 46);
-            this.pn_top.TabIndex = 0;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(549, 34);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(267, 2);
-            this.guna2Panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(492, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Pharmaceutical sales management software";
-            // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BorderRadius = 10;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_close.IconColor = System.Drawing.Color.DimGray;
-            this.btn_close.Location = new System.Drawing.Point(1340, 9);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(47, 31);
-            this.btn_close.TabIndex = 0;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.btn_close;
-            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // btn_logout
             // 
@@ -224,6 +138,7 @@
             this.btn_Staff.Size = new System.Drawing.Size(283, 65);
             this.btn_Staff.TabIndex = 6;
             this.btn_Staff.Text = "Staff";
+            this.btn_Staff.Visible = false;
             this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
             // 
             // btn_supplier
@@ -253,6 +168,7 @@
             this.btn_supplier.Size = new System.Drawing.Size(283, 65);
             this.btn_supplier.TabIndex = 5;
             this.btn_supplier.Text = "Supplier";
+            this.btn_supplier.Visible = false;
             this.btn_supplier.Click += new System.EventHandler(this.btn_supplier_Click);
             // 
             // btn_purchase
@@ -282,6 +198,7 @@
             this.btn_purchase.Size = new System.Drawing.Size(283, 65);
             this.btn_purchase.TabIndex = 5;
             this.btn_purchase.Text = "Purchase Invoice";
+            this.btn_purchase.Visible = false;
             this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
             // btn_sale
@@ -369,6 +286,7 @@
             this.btn_product.Size = new System.Drawing.Size(283, 65);
             this.btn_product.TabIndex = 4;
             this.btn_product.Text = "Medicine";
+            this.btn_product.Visible = false;
             this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_dashboard
@@ -398,7 +316,18 @@
             this.btn_dashboard.Size = new System.Drawing.Size(283, 65);
             this.btn_dashboard.TabIndex = 3;
             this.btn_dashboard.Text = "Dash Board";
+            this.btn_dashboard.Visible = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(332, 236);
+            this.guna2Panel1.TabIndex = 1;
             // 
             // guna2PictureBox1
             // 
@@ -414,6 +343,89 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
+            // pn_control
+            // 
+            this.pn_control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.pn_control.BorderRadius = 20;
+            this.pn_control.Controls.Add(this.pn_main);
+            this.pn_control.Controls.Add(this.pn_top);
+            this.pn_control.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn_control.Location = new System.Drawing.Point(332, 0);
+            this.pn_control.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_control.Name = "pn_control";
+            this.pn_control.ShadowDecoration.BorderRadius = 10;
+            this.pn_control.Size = new System.Drawing.Size(1401, 1046);
+            this.pn_control.TabIndex = 0;
+            // 
+            // pn_main
+            // 
+            this.pn_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_main.Location = new System.Drawing.Point(0, 46);
+            this.pn_main.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_main.Name = "pn_main";
+            this.pn_main.Size = new System.Drawing.Size(1401, 1000);
+            this.pn_main.TabIndex = 1;
+            // 
+            // pn_top
+            // 
+            this.pn_top.Controls.Add(this.guna2Panel2);
+            this.pn_top.Controls.Add(this.label1);
+            this.pn_top.Controls.Add(this.btn_close);
+            this.pn_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_top.Location = new System.Drawing.Point(0, 0);
+            this.pn_top.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_top.Name = "pn_top";
+            this.pn_top.Size = new System.Drawing.Size(1401, 46);
+            this.pn_top.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(549, 34);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(267, 2);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(492, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(377, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Pharmaceutical sales management software";
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BorderRadius = 10;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_close.IconColor = System.Drawing.Color.DimGray;
+            this.btn_close.Location = new System.Drawing.Point(1340, 9);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(47, 31);
+            this.btn_close.TabIndex = 0;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.btn_close;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2DragControl2
+            // 
+            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2.TargetControl = this.pn_top;
+            this.guna2DragControl2.UseTransparentDrag = true;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,17 +433,17 @@
             this.ClientSize = new System.Drawing.Size(1733, 1046);
             this.Controls.Add(this.pn_left);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.pn_left.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pn_control.ResumeLayout(false);
             this.pn_top.ResumeLayout(false);
             this.pn_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,5 +469,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
     }
 }

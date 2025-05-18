@@ -150,7 +150,7 @@ namespace DAn_QLCuaHangBanthuoc
                 }
                 else
                 {
-                    pic_image.Image = Image.FromFile("C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\image");
+                    //pic_image.Image = Image.FromFile("C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\image");
                 }
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.chkHeart = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkHTN = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -51,6 +52,7 @@
             this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -456,6 +458,12 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Age:";
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.label6;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // predict
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -496,5 +504,6 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txtBMI;
         private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

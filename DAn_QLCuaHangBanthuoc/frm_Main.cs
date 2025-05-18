@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,16 @@ namespace DAn_QLCuaHangBanthuoc
             this.userRole = role;
             this.username = username;
             SetupPermissions();
-            container(new frm_dashboard());
+            if (userRole == "Management")
+            {
+                container(new frm_dashboard());
+                
+            }
+            else
+            {
+                container(new frm_customer());
+            }
+
             this.Text = $"Pharmacy Management System - User: {username} ({userRole})";
         }
 
@@ -35,13 +45,12 @@ namespace DAn_QLCuaHangBanthuoc
             // Only Management role has full access
             if (userRole == "Management")
             {
-                btn_dashboard.Enabled = true;
-                btn_product.Enabled = true;
-                btn_Customer.Enabled = true;
-                btn_sale.Enabled = true;
-                btn_purchase.Enabled = true;
-                btn_supplier.Enabled = true;
-                btn_Staff.Enabled = true;
+                btn_dashboard.Visible = true;
+                btn_product.Visible = true;
+                btn_Customer.Visible = true;
+                btn_sale.Visible = true;
+                btn_purchase.Visible = true;
+                btn_supplier.Visible = true;
                 btn_Staff.Visible = true;
             }
             // Staff role has limited access

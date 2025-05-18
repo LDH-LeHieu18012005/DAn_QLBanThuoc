@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_excel = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,12 +79,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_data.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_data.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgv_data.Location = new System.Drawing.Point(12, 100);
+            this.dgv_data.Location = new System.Drawing.Point(16, 123);
+            this.dgv_data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_data.Name = "dgv_data";
             this.dgv_data.RowHeadersVisible = false;
             this.dgv_data.RowHeadersWidth = 60;
             this.dgv_data.RowTemplate.Height = 40;
-            this.dgv_data.Size = new System.Drawing.Size(1027, 701);
+            this.dgv_data.Size = new System.Drawing.Size(1369, 863);
             this.dgv_data.TabIndex = 29;
             this.dgv_data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -111,31 +114,37 @@
             // Column1
             // 
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Staff Created";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Customer";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Date Created";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Total Price";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Status";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // txtSearch
@@ -155,12 +164,12 @@
             this.txtSearch.IconLeft = global::DAn_QLCuaHangBanthuoc.Properties.Resources.search;
             this.txtSearch.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch.Location = new System.Drawing.Point(315, 43);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(420, 53);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(459, 39);
+            this.txtSearch.Size = new System.Drawing.Size(612, 48);
             this.txtSearch.TabIndex = 28;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -185,9 +194,10 @@
             this.btn_add.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_add.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_add.IndicateFocus = true;
-            this.btn_add.Location = new System.Drawing.Point(907, 42);
+            this.btn_add.Location = new System.Drawing.Point(1209, 52);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(132, 40);
+            this.btn_add.Size = new System.Drawing.Size(176, 49);
             this.btn_add.TabIndex = 27;
             this.btn_add.Text = "Create New";
             this.btn_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -198,9 +208,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(12, 32);
+            this.label2.Location = new System.Drawing.Point(16, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 36);
+            this.label2.Size = new System.Drawing.Size(240, 45);
             this.label2.TabIndex = 26;
             this.label2.Text = "Sale Invoices";
             // 
@@ -226,9 +237,10 @@
             this.btn_delete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_delete.IndicateFocus = true;
-            this.btn_delete.Location = new System.Drawing.Point(907, 42);
+            this.btn_delete.Location = new System.Drawing.Point(1209, 52);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(132, 40);
+            this.btn_delete.Size = new System.Drawing.Size(176, 49);
             this.btn_delete.TabIndex = 34;
             this.btn_delete.Text = "      Delete";
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -253,19 +265,26 @@
             this.btn_excel.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.excel_file;
             this.btn_excel.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_excel.IndicateFocus = true;
-            this.btn_excel.Location = new System.Drawing.Point(853, 43);
+            this.btn_excel.Location = new System.Drawing.Point(1137, 53);
+            this.btn_excel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.Size = new System.Drawing.Size(48, 40);
+            this.btn_excel.Size = new System.Drawing.Size(64, 49);
             this.btn_excel.TabIndex = 35;
             this.btn_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frm_sale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1051, 813);
+            this.ClientSize = new System.Drawing.Size(1401, 1001);
             this.Controls.Add(this.btn_excel);
             this.Controls.Add(this.dgv_data);
             this.Controls.Add(this.txtSearch);
@@ -273,6 +292,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_delete);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_sale";
             this.Text = "frm_sale";
             this.Click += new System.EventHandler(this.frm_sale_Click);
@@ -296,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2Button btn_excel;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
