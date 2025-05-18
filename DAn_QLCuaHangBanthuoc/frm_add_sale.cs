@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using ZXing;
+using ZXing.QrCode;
+using ZXing.Windows.Compatibility;
+using AForge.Video;
+using AForge.Video.DirectShow;
+
 
 namespace DAn_QLCuaHangBanthuoc
 {
@@ -18,6 +25,9 @@ namespace DAn_QLCuaHangBanthuoc
         List<string> ID_medicine = new List<string>();
         List<int> stock_quantity = new List<int>();
         DataTable TableMedicine;
+        FilterInfoCollection FilterInfoCollection;
+        VideoCaptureDevice videocaptureDevice;
+        private bool isCameraRunning;
 
         public frm_add_sale(frm_Main mainForm)
         {
@@ -53,12 +63,51 @@ namespace DAn_QLCuaHangBanthuoc
             row3["id_medicine"] = -1;
             row3["name_medicine"] = "-- Select Medicne --";
             TableMedicine.Rows.InsertAt(row3, 0);
-            cbo_medicine.DataSource = TableMedicine;
-            cbo_medicine.DisplayMember = "name_medicine";
-            cbo_medicine.ValueMember = "id_medicine";
-            cbo_medicine.SelectedValue = -1;
+            FilterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo device in FilterInfoCollection)
+                cmbmayanh.Items.Add(device.Name);
+            cmbmayanh.SelectedIndex = 0;
         }
+        private void CaptureDevice_Newfame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            var reader = new ZXing.BarcodeReader();
+            reader.Options.PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE, BarcodeFormat.CODE_128, BarcodeFormat.EAN_13 };
+            // Nếu bạn chỉ quét QR thì chỉ giữ QR_CODE cũng được
 
+
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                txt_medicineID.Invoke(new MethodInvoker(delegate ()
+                {
+                    txt_medicineID.Text = result.ToString();
+                }));
+            }
+        }
+        private async Task StopCameraAsync()
+        {
+            // Dừng camera một cách an toàn trong luồng riêng biệt
+            if (isCameraRunning && videocaptureDevice != null)
+            {
+                try
+                {
+                    videocaptureDevice.SignalToStop();
+                    await Task.Run(() => videocaptureDevice.WaitForStop());  // Chờ camera dừng lại hoàn toàn
+                    videocaptureDevice.NewFrame -= CaptureDevice_Newfame; // Gỡ sự kiện
+                    isCameraRunning = false;
+                    Console.WriteLine("Camera stopped...");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error stopping camera: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No camera to stop.");
+            }
+        }
         private void btn_close_Click(object sender, EventArgs e)
         {
             _mainForm.container(new frm_sale(_mainForm));
@@ -80,26 +129,39 @@ namespace DAn_QLCuaHangBanthuoc
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (cbo_medicine.SelectedValue == null || cbo_medicine.SelectedValue.ToString() == "-1")
+            string selectedId = txt_medicineID.Text.Trim();
+
+            if (string.IsNullOrEmpty(selectedId))
             {
-                MessageBox.Show("Please select a product from the list!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập mã thuốc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string selectedMedicineId = cbo_medicine.SelectedValue.ToString();
-            if (ID_medicine.Contains(selectedMedicineId))
+
+            // Kiểm tra mã thuốc có tồn tại không
+            if (!TableMedicine.Rows.Cast<DataRow>().Any(r => r["id_medicine"].ToString() == selectedId))
             {
-                MessageBox.Show("The product has been added to the invoice!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã thuốc không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // Kiểm tra trùng mã
+            if (ID_medicine.Contains(selectedId))
+            {
+                MessageBox.Show("Thuốc đã được thêm vào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Thêm thuốc
             foreach (DataRow row in TableMedicine.Rows)
             {
-                if (selectedMedicineId == row["id_medicine"].ToString())
+                if (selectedId == row["id_medicine"].ToString())
                 {
                     dgv_data.Rows.Add(row["name_medicine"], 1, row["price"]);
-                    ID_medicine.Add(selectedMedicineId);
+                    ID_medicine.Add(selectedId);
                     stock_quantity.Add(Convert.ToInt32(row["total_quantity"]));
                     UpdateTotalAmount();
-                    return; 
+                    txt_medicineID.Clear(); // Xóa text sau khi thêm
+                    return;
                 }
             }
         }
@@ -180,6 +242,47 @@ namespace DAn_QLCuaHangBanthuoc
             }
         }
 
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            var reader = new ZXing.BarcodeReader
+            {
+                AutoRotate = true,
+                Options = { PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE, BarcodeFormat.CODE_128, BarcodeFormat.EAN_13 } }
+            };
+            var result = reader.Decode(bitmap);
+
+            if (result != null)
+            {
+                txt_medicineID.Invoke(new MethodInvoker(() =>
+                {
+                    txt_medicineID.Text = result.Text;
+                }));
+            }
+        }
+
+        private void StartCamera()
+        {
+            if (videocaptureDevice != null && videocaptureDevice.IsRunning)
+            {
+                videocaptureDevice.SignalToStop();
+                videocaptureDevice.NewFrame -= CaptureDevice_NewFrame;
+            }
+
+            if (cmbmayanh.SelectedIndex >= 0)
+            {
+                string cameraName = cmbmayanh.SelectedItem.ToString();
+                FilterInfo selectedCamera = FilterInfoCollection.Cast<FilterInfo>().FirstOrDefault(f => f.Name == cameraName);
+                if (selectedCamera != null)
+                {
+                    videocaptureDevice = new VideoCaptureDevice(selectedCamera.MonikerString);
+                    videocaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                    videocaptureDevice.Start();
+                    isCameraRunning = true;
+                }
+            }
+        }
+
         private void dgv_data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btn_delete.Visible = true;
@@ -190,6 +293,11 @@ namespace DAn_QLCuaHangBanthuoc
         {
             btn_delete.Visible = false;
             btn_add.Visible = true;
+        }
+
+        private void btnStartCamera_Click_1(object sender, EventArgs e)
+        {
+            StartCamera();
         }
     }
 }
