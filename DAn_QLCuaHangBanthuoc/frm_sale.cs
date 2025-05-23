@@ -27,12 +27,12 @@ namespace DAn_QLCuaHangBanthuoc
         }
         void loadData()
         {
-            dgv_data.Rows.Clear();
-            DataTable dataTable = bll.GetDataSale(txtSearch.Text);
-            foreach (DataRow row in dataTable.Rows)
-            {
-                dgv_data.Rows.Add(row[0], row[1], row[2], row[3], row[5], row[4]);
-            }
+                 dgv_data.Rows.Clear();
+                DataTable dataTable = bll.GetDataSale(txtSearch.Text);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    dgv_data.Rows.Add(row[0], row[1], row[2], row[3], row[5], row[4]);
+                }
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

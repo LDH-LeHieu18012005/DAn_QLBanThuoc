@@ -1,4 +1,4 @@
-USE DAn_1_QLBanThuoc
+﻿USE DAn_1_QLBanThuoc
 GO
 
 CREATE OR ALTER TRIGGER Trigger_UpdateBatchStatus
@@ -40,7 +40,7 @@ BEGIN
     WHERE m.id_medicine IN (SELECT id_medicine FROM @AffectedMedicines);
     UPDATE m
     SET price = (
-        SELECT TOP 1 b.entry_price
+        SELECT TOP 1 b.entry_price *1.3--tăng 30%
         FROM Batch b
         WHERE b.id_medicine = m.id_medicine
           AND b.status = 'Active'

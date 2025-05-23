@@ -88,7 +88,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.pic_image);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(16, 15);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
@@ -109,12 +109,13 @@
             this.cbo_unit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbo_unit.ItemHeight = 30;
             this.cbo_unit.Items.AddRange(new object[] {
-            "Tablet",
-            "Capsule",
-            "Syrup",
-            ""});
+            "Viên",
+            "Gói",
+            "Siro",
+            "Lọ",
+            "Cái"});
             this.cbo_unit.Location = new System.Drawing.Point(55, 423);
-            this.cbo_unit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_unit.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_unit.Name = "cbo_unit";
             this.cbo_unit.Size = new System.Drawing.Size(372, 36);
             this.cbo_unit.TabIndex = 34;
@@ -142,7 +143,7 @@
             this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_delete.IndicateFocus = true;
             this.btn_delete.Location = new System.Drawing.Point(472, 779);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(160, 62);
             this.btn_delete.TabIndex = 33;
@@ -172,7 +173,7 @@
             this.btn_edit.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_edit.IndicateFocus = true;
             this.btn_edit.Location = new System.Drawing.Point(640, 779);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(160, 62);
             this.btn_edit.TabIndex = 32;
@@ -202,7 +203,7 @@
             this.btn_add.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_add.IndicateFocus = true;
             this.btn_add.Location = new System.Drawing.Point(808, 779);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(160, 62);
             this.btn_add.TabIndex = 31;
@@ -328,7 +329,7 @@
             "0",
             "1"});
             this.cbo_active.Location = new System.Drawing.Point(55, 518);
-            this.cbo_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_active.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_active.Name = "cbo_active";
             this.cbo_active.Size = new System.Drawing.Size(372, 36);
             this.cbo_active.TabIndex = 24;
@@ -403,7 +404,7 @@
             this.cbo_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbo_type.ItemHeight = 30;
             this.cbo_type.Location = new System.Drawing.Point(55, 242);
-            this.cbo_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_type.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_type.Name = "cbo_type";
             this.cbo_type.Size = new System.Drawing.Size(372, 36);
             this.cbo_type.TabIndex = 18;
@@ -445,7 +446,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.guna2Panel1.Location = new System.Drawing.Point(247, 79);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(465, 4);
             this.guna2Panel1.TabIndex = 15;
@@ -460,7 +461,7 @@
             this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_close.IconColor = System.Drawing.Color.DimGray;
             this.btn_close.Location = new System.Drawing.Point(963, 4);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(47, 31);
             this.btn_close.TabIndex = 1;
@@ -509,7 +510,7 @@
             this.pic_image.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.image;
             this.pic_image.ImageRotate = 0F;
             this.pic_image.Location = new System.Drawing.Point(65, 614);
-            this.pic_image.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_image.Margin = new System.Windows.Forms.Padding(4);
             this.pic_image.Name = "pic_image";
             this.pic_image.Size = new System.Drawing.Size(335, 226);
             this.pic_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -531,7 +532,7 @@
             this.ClientSize = new System.Drawing.Size(1093, 927);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_add_medicine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_add_medicine";

@@ -49,7 +49,6 @@
             this.btnPredict = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -78,7 +77,6 @@
             this.guna2ShadowPanel1.Controls.Add(this.btnPredict);
             this.guna2ShadowPanel1.Controls.Add(this.label2);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Panel1);
-            this.guna2ShadowPanel1.Controls.Add(this.btn_close);
             this.guna2ShadowPanel1.Controls.Add(this.label6);
             this.guna2ShadowPanel1.Controls.Add(this.label7);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
@@ -101,9 +99,9 @@
             this.chkHeart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.chkHeart.Location = new System.Drawing.Point(717, 557);
             this.chkHeart.Name = "chkHeart";
-            this.chkHeart.Size = new System.Drawing.Size(106, 28);
+            this.chkHeart.Size = new System.Drawing.Size(186, 35);
             this.chkHeart.TabIndex = 60;
-            this.chkHeart.Text = "Bệnh tim";
+            this.chkHeart.Text = "Heart Disease";
             this.chkHeart.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkHeart.UncheckedState.BorderRadius = 0;
             this.chkHeart.UncheckedState.BorderThickness = 0;
@@ -119,9 +117,9 @@
             this.chkHTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.chkHTN.Location = new System.Drawing.Point(157, 557);
             this.chkHTN.Name = "chkHTN";
-            this.chkHTN.Size = new System.Drawing.Size(143, 28);
+            this.chkHTN.Size = new System.Drawing.Size(180, 35);
             this.chkHTN.TabIndex = 59;
-            this.chkHTN.Text = "Cao huyết áp";
+            this.chkHTN.Text = "Hypertension";
             this.chkHTN.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkHTN.UncheckedState.BorderRadius = 0;
             this.chkHTN.UncheckedState.BorderThickness = 0;
@@ -419,21 +417,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(400, 4);
             this.guna2Panel1.TabIndex = 15;
             // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BorderRadius = 10;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_close.IconColor = System.Drawing.Color.DimGray;
-            this.btn_close.Location = new System.Drawing.Point(1084, 4);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(47, 31);
-            this.btn_close.TabIndex = 1;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -487,7 +470,6 @@
         private Guna.UI2.WinForms.Guna2Button btnPredict;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ControlBox btn_close;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbSmoke;

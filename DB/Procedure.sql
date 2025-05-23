@@ -436,7 +436,7 @@ BEGIN
     INSERT INTO Batch (id_medicine, quantity_in_batch, entry_price, manufacturing_date, expiry_date, status)
     VALUES (@IdMedicine, @QuantityInBatch, @EntryPrice, @ManufacturingDate, @ExpiryDate, @Status);
 
-    SET @IdBatch = SCOPE_IDENTITY();
+    SET @IdBatch = SCOPE_IDENTITY();--lấy ra biến tự động tăng gần nhất
 END;
 GO
 

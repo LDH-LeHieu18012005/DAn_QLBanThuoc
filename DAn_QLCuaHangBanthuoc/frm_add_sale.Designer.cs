@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnStartCamera = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbmayanh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_medicineID = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_price = new System.Windows.Forms.Label();
             this.lbl_total_price = new System.Windows.Forms.Label();
@@ -41,20 +43,18 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_new_sale = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.cbo_customer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbo_staff = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.cmbmayanh = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnStartCamera = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_new_sale = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_add = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -91,6 +91,54 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1205, 884);
             this.guna2ShadowPanel1.TabIndex = 36;
             this.guna2ShadowPanel1.Click += new System.EventHandler(this.guna2ShadowPanel1_Click);
+            // 
+            // btnStartCamera
+            // 
+            this.btnStartCamera.Animated = true;
+            this.btnStartCamera.BackColor = System.Drawing.Color.White;
+            this.btnStartCamera.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnStartCamera.BorderRadius = 7;
+            this.btnStartCamera.BorderThickness = 1;
+            this.btnStartCamera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStartCamera.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStartCamera.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStartCamera.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStartCamera.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStartCamera.FillColor = System.Drawing.Color.White;
+            this.btnStartCamera.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnStartCamera.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnStartCamera.HoverState.BorderColor = System.Drawing.Color.Green;
+            this.btnStartCamera.HoverState.FillColor = System.Drawing.Color.Green;
+            this.btnStartCamera.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnStartCamera.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.search2;
+            this.btnStartCamera.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStartCamera.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnStartCamera.IndicateFocus = true;
+            this.btnStartCamera.Location = new System.Drawing.Point(536, 241);
+            this.btnStartCamera.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStartCamera.Name = "btnStartCamera";
+            this.btnStartCamera.Size = new System.Drawing.Size(136, 44);
+            this.btnStartCamera.TabIndex = 63;
+            this.btnStartCamera.Text = "     Find";
+            this.btnStartCamera.Click += new System.EventHandler(this.btnStartCamera_Click_1);
+            // 
+            // cmbmayanh
+            // 
+            this.cmbmayanh.BackColor = System.Drawing.Color.Transparent;
+            this.cmbmayanh.BorderColor = System.Drawing.Color.Gray;
+            this.cmbmayanh.BorderRadius = 10;
+            this.cmbmayanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbmayanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbmayanh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbmayanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbmayanh.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbmayanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbmayanh.ItemHeight = 30;
+            this.cmbmayanh.Location = new System.Drawing.Point(271, 241);
+            this.cmbmayanh.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbmayanh.Name = "cmbmayanh";
+            this.cmbmayanh.Size = new System.Drawing.Size(247, 36);
+            this.cmbmayanh.TabIndex = 62;
             // 
             // txt_medicineID
             // 
@@ -226,157 +274,6 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "Customer:";
             // 
-            // cbo_customer
-            // 
-            this.cbo_customer.BackColor = System.Drawing.Color.Transparent;
-            this.cbo_customer.BorderColor = System.Drawing.Color.Gray;
-            this.cbo_customer.BorderRadius = 10;
-            this.cbo_customer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbo_customer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_customer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_customer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_customer.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbo_customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbo_customer.ItemHeight = 30;
-            this.cbo_customer.Location = new System.Drawing.Point(268, 93);
-            this.cbo_customer.Margin = new System.Windows.Forms.Padding(4);
-            this.cbo_customer.Name = "cbo_customer";
-            this.cbo_customer.Size = new System.Drawing.Size(338, 36);
-            this.cbo_customer.TabIndex = 51;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(801, 65);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 24);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Created by:";
-            // 
-            // cbo_staff
-            // 
-            this.cbo_staff.BackColor = System.Drawing.Color.Transparent;
-            this.cbo_staff.BorderColor = System.Drawing.Color.Gray;
-            this.cbo_staff.BorderRadius = 10;
-            this.cbo_staff.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbo_staff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_staff.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_staff.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbo_staff.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbo_staff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbo_staff.ItemHeight = 30;
-            this.cbo_staff.Location = new System.Drawing.Point(805, 93);
-            this.cbo_staff.Margin = new System.Windows.Forms.Padding(4);
-            this.cbo_staff.Name = "cbo_staff";
-            this.cbo_staff.Size = new System.Drawing.Size(335, 36);
-            this.cbo_staff.TabIndex = 49;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(267, 138);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 24);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "IDMedicine:";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.guna2Panel1.Location = new System.Drawing.Point(536, 57);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(133, 4);
-            this.guna2Panel1.TabIndex = 15;
-            // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BorderRadius = 10;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_close.IconColor = System.Drawing.Color.DimGray;
-            this.btn_close.Location = new System.Drawing.Point(1155, 4);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(47, 31);
-            this.btn_close.TabIndex = 1;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(464, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(289, 39);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Create Sale Invoice";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.label6;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // cmbmayanh
-            // 
-            this.cmbmayanh.BackColor = System.Drawing.Color.Transparent;
-            this.cmbmayanh.BorderColor = System.Drawing.Color.Gray;
-            this.cmbmayanh.BorderRadius = 10;
-            this.cmbmayanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbmayanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbmayanh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbmayanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbmayanh.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbmayanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbmayanh.ItemHeight = 30;
-            this.cmbmayanh.Location = new System.Drawing.Point(271, 241);
-            this.cmbmayanh.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbmayanh.Name = "cmbmayanh";
-            this.cmbmayanh.Size = new System.Drawing.Size(247, 36);
-            this.cmbmayanh.TabIndex = 62;
-            // 
-            // btnStartCamera
-            // 
-            this.btnStartCamera.Animated = true;
-            this.btnStartCamera.BackColor = System.Drawing.Color.White;
-            this.btnStartCamera.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnStartCamera.BorderRadius = 7;
-            this.btnStartCamera.BorderThickness = 1;
-            this.btnStartCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStartCamera.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStartCamera.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStartCamera.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStartCamera.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStartCamera.FillColor = System.Drawing.Color.White;
-            this.btnStartCamera.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnStartCamera.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnStartCamera.HoverState.BorderColor = System.Drawing.Color.Green;
-            this.btnStartCamera.HoverState.FillColor = System.Drawing.Color.Green;
-            this.btnStartCamera.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnStartCamera.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.search2;
-            this.btnStartCamera.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStartCamera.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnStartCamera.IndicateFocus = true;
-            this.btnStartCamera.Location = new System.Drawing.Point(536, 241);
-            this.btnStartCamera.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStartCamera.Name = "btnStartCamera";
-            this.btnStartCamera.Size = new System.Drawing.Size(136, 44);
-            this.btnStartCamera.TabIndex = 63;
-            this.btnStartCamera.Text = "     Find";
-            this.btnStartCamera.Click += new System.EventHandler(this.btnStartCamera_Click_1);
-            // 
             // btn_new_sale
             // 
             this.btn_new_sale.Animated = true;
@@ -438,6 +335,66 @@
             this.btn_add.Text = "     Add";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // cbo_customer
+            // 
+            this.cbo_customer.BackColor = System.Drawing.Color.Transparent;
+            this.cbo_customer.BorderColor = System.Drawing.Color.Gray;
+            this.cbo_customer.BorderRadius = 10;
+            this.cbo_customer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_customer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_customer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_customer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_customer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbo_customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbo_customer.ItemHeight = 30;
+            this.cbo_customer.Location = new System.Drawing.Point(268, 93);
+            this.cbo_customer.Margin = new System.Windows.Forms.Padding(4);
+            this.cbo_customer.Name = "cbo_customer";
+            this.cbo_customer.Size = new System.Drawing.Size(338, 36);
+            this.cbo_customer.TabIndex = 51;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(801, 65);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 24);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Created by:";
+            // 
+            // cbo_staff
+            // 
+            this.cbo_staff.BackColor = System.Drawing.Color.Transparent;
+            this.cbo_staff.BorderColor = System.Drawing.Color.Gray;
+            this.cbo_staff.BorderRadius = 10;
+            this.cbo_staff.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbo_staff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_staff.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_staff.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbo_staff.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbo_staff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbo_staff.ItemHeight = 30;
+            this.cbo_staff.Location = new System.Drawing.Point(805, 93);
+            this.cbo_staff.Margin = new System.Windows.Forms.Padding(4);
+            this.cbo_staff.Name = "cbo_staff";
+            this.cbo_staff.Size = new System.Drawing.Size(335, 36);
+            this.cbo_staff.TabIndex = 49;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(267, 138);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 24);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "IDMedicine:";
+            // 
             // btn_delete
             // 
             this.btn_delete.Animated = true;
@@ -468,6 +425,43 @@
             this.btn_delete.Text = "        Delete";
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Panel1.Location = new System.Drawing.Point(536, 57);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(133, 4);
+            this.guna2Panel1.TabIndex = 15;
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BorderRadius = 10;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_close.IconColor = System.Drawing.Color.DimGray;
+            this.btn_close.Location = new System.Drawing.Point(1155, 4);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(47, 31);
+            this.btn_close.TabIndex = 1;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label6.Location = new System.Drawing.Point(464, 14);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(289, 39);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Create Sale Invoice";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.payment;
@@ -479,6 +473,12 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 39;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.label6;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // frm_add_sale
             // 
