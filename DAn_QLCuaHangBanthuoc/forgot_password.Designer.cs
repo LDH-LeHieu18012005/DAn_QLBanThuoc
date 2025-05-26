@@ -1,6 +1,6 @@
 ﻿namespace DAn_QLCuaHangBanthuoc
 {
-    partial class frm_Login
+    partial class forgot_password
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forgot_password));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.lbl_role = new System.Windows.Forms.Label();
+            this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pic_role = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtcode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.btn_login = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,48 +49,88 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.linkLabel2);
-            this.guna2ShadowPanel1.Controls.Add(this.lbl_role);
+            this.guna2ShadowPanel1.Controls.Add(this.txtemail);
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel1.Controls.Add(this.pic_role);
-            this.guna2ShadowPanel1.Controls.Add(this.linkLabel1);
-            this.guna2ShadowPanel1.Controls.Add(this.txtMK);
+            this.guna2ShadowPanel1.Controls.Add(this.txtcode);
             this.guna2ShadowPanel1.Controls.Add(this.btn_exit);
             this.guna2ShadowPanel1.Controls.Add(this.btn_login);
             this.guna2ShadowPanel1.Controls.Add(this.label4);
             this.guna2ShadowPanel1.Controls.Add(this.txtTK);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(8, 6);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(9, 3);
             this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(639, 555);
-            this.guna2ShadowPanel1.TabIndex = 5;
+            this.guna2ShadowPanel1.TabIndex = 6;
             // 
-            // linkLabel2
+            // txtemail
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(289, 512);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(134, 20);
-            this.linkLabel2.TabIndex = 39;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Forgot password";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.txtemail.BorderColor = System.Drawing.Color.Gray;
+            this.txtemail.BorderRadius = 10;
+            this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtemail.DefaultText = "";
+            this.txtemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtemail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtemail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtemail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtemail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtemail.Location = new System.Drawing.Point(180, 393);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.PlaceholderText = "";
+            this.txtemail.SelectedText = "";
+            this.txtemail.Size = new System.Drawing.Size(373, 44);
+            this.txtemail.TabIndex = 40;
             // 
-            // lbl_role
+            // label2
             // 
-            this.lbl_role.AutoSize = true;
-            this.lbl_role.Location = new System.Drawing.Point(448, 48);
-            this.lbl_role.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_role.Name = "lbl_role";
-            this.lbl_role.Size = new System.Drawing.Size(61, 16);
-            this.lbl_role.TabIndex = 38;
-            this.lbl_role.Text = "Manager";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(4, 338);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 24);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Confirmation code";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button1.BorderRadius = 7;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.IndicateFocus = true;
+            this.guna2Button1.Location = new System.Drawing.Point(50, 470);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(160, 62);
+            this.guna2Button1.TabIndex = 38;
+            this.guna2Button1.Text = "     Send OTP";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pic_role
             // 
@@ -103,40 +144,26 @@
             this.pic_role.TabIndex = 37;
             this.pic_role.TabStop = false;
             // 
-            // linkLabel1
+            // txtcode
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(249, 389);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(201, 20);
-            this.linkLabel1.TabIndex = 36;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign in as a staff member";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // txtMK
-            // 
-            this.txtMK.BorderColor = System.Drawing.Color.Gray;
-            this.txtMK.BorderRadius = 10;
-            this.txtMK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMK.DefaultText = "";
-            this.txtMK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMK.Location = new System.Drawing.Point(180, 327);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.PasswordChar = '*';
-            this.txtMK.PlaceholderText = "";
-            this.txtMK.SelectedText = "";
-            this.txtMK.Size = new System.Drawing.Size(373, 44);
-            this.txtMK.TabIndex = 35;
+            this.txtcode.BorderColor = System.Drawing.Color.Gray;
+            this.txtcode.BorderRadius = 10;
+            this.txtcode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcode.DefaultText = "";
+            this.txtcode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcode.Location = new System.Drawing.Point(180, 327);
+            this.txtcode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcode.Name = "txtcode";
+            this.txtcode.PlaceholderText = "";
+            this.txtcode.SelectedText = "";
+            this.txtcode.Size = new System.Drawing.Size(373, 44);
+            this.txtcode.TabIndex = 35;
             // 
             // btn_exit
             // 
@@ -160,7 +187,7 @@
             this.btn_exit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_exit.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_exit.IndicateFocus = true;
-            this.btn_exit.Location = new System.Drawing.Point(180, 433);
+            this.btn_exit.Location = new System.Drawing.Point(254, 470);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(160, 62);
@@ -190,12 +217,12 @@
             this.btn_login.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_login.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_login.IndicateFocus = true;
-            this.btn_login.Location = new System.Drawing.Point(379, 433);
+            this.btn_login.Location = new System.Drawing.Point(453, 470);
             this.btn_login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(160, 62);
             this.btn_login.TabIndex = 31;
-            this.btn_login.Text = "Sign In";
+            this.btn_login.Text = "Confirm";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
@@ -204,12 +231,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(67, 338);
+            this.label4.Location = new System.Drawing.Point(4, 405);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 24);
+            this.label4.Size = new System.Drawing.Size(62, 24);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Password:";
+            this.label4.Text = "Email:";
             // 
             // txtTK
             // 
@@ -237,7 +264,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(64, 276);
+            this.label1.Location = new System.Drawing.Point(4, 275);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 24);
@@ -250,7 +277,7 @@
             this.guna2DragControl1.TargetControl = this.pic_role;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // frm_Login
+            // forgot_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,10 +285,10 @@
             this.ClientSize = new System.Drawing.Size(656, 560);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_Login";
+            this.Location = new System.Drawing.Point(8, 6);
+            this.Name = "forgot_password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_Login";
+            this.Text = "forgot_password";
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_role)).EndInit();
@@ -272,16 +299,16 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtMK;
+        private Guna.UI2.WinForms.Guna2TextBox txtemail;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_role;
+        private Guna.UI2.WinForms.Guna2TextBox txtcode;
         private Guna.UI2.WinForms.Guna2Button btn_exit;
         private Guna.UI2.WinForms.Guna2Button btn_login;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtTK;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox pic_role;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lbl_role;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

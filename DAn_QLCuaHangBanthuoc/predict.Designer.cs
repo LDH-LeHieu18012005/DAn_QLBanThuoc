@@ -99,7 +99,7 @@
             this.chkHeart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.chkHeart.Location = new System.Drawing.Point(717, 557);
             this.chkHeart.Name = "chkHeart";
-            this.chkHeart.Size = new System.Drawing.Size(186, 35);
+            this.chkHeart.Size = new System.Drawing.Size(149, 28);
             this.chkHeart.TabIndex = 60;
             this.chkHeart.Text = "Heart Disease";
             this.chkHeart.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -117,7 +117,7 @@
             this.chkHTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.chkHTN.Location = new System.Drawing.Point(157, 557);
             this.chkHTN.Name = "chkHTN";
-            this.chkHTN.Size = new System.Drawing.Size(180, 35);
+            this.chkHTN.Size = new System.Drawing.Size(144, 28);
             this.chkHTN.TabIndex = 59;
             this.chkHTN.Text = "Hypertension";
             this.chkHTN.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -434,7 +434,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(613, 139);
+            this.label7.Location = new System.Drawing.Point(601, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 24);

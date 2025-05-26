@@ -115,7 +115,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.ch_revenue);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(43, 98);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
@@ -130,7 +130,7 @@
             legend1.Name = "Legend1";
             this.ch_revenue.Legends.Add(legend1);
             this.ch_revenue.Location = new System.Drawing.Point(4, 4);
-            this.ch_revenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch_revenue.Margin = new System.Windows.Forms.Padding(4);
             this.ch_revenue.Name = "ch_revenue";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -149,7 +149,7 @@
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Location = new System.Drawing.Point(52, 514);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(356, 98);
             this.guna2Panel1.TabIndex = 3;
@@ -172,7 +172,7 @@
             this.guna2PictureBox1.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.piggy_bankư1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(20, 14);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(76, 70);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,7 +200,7 @@
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel2.Location = new System.Drawing.Point(416, 514);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.BorderRadius = 10;
             this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 5, 10);
@@ -237,7 +237,7 @@
             this.guna2PictureBox2.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.bitcoin;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(19, 14);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(77, 70);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +263,7 @@
             legend2.Name = "Legend1";
             this.ch_top.Legends.Add(legend2);
             this.ch_top.Location = new System.Drawing.Point(4, 52);
-            this.ch_top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch_top.Margin = new System.Windows.Forms.Padding(4);
             this.ch_top.Name = "ch_top";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -293,7 +293,7 @@
             this.guna2ShadowPanel2.Controls.Add(this.ch_top);
             this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel2.Location = new System.Drawing.Point(797, 39);
-            this.guna2ShadowPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.Radius = 10;
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
@@ -308,7 +308,7 @@
             this.guna2ShadowPanel3.Controls.Add(this.lbl_customer);
             this.guna2ShadowPanel3.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(801, 737);
-            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             this.guna2ShadowPanel3.Radius = 10;
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Black;
@@ -322,7 +322,7 @@
             this.guna2PictureBox3.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.patient22;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(20, 15);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(124, 71);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,7 +348,7 @@
             this.guna2ShadowPanel4.Controls.Add(this.lbl_medicine);
             this.guna2ShadowPanel4.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel4.Location = new System.Drawing.Point(995, 737);
-            this.guna2ShadowPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
             this.guna2ShadowPanel4.Radius = 10;
             this.guna2ShadowPanel4.ShadowColor = System.Drawing.Color.Black;
@@ -362,7 +362,7 @@
             this.guna2PictureBox4.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.pills1;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(44, 15);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(93, 100);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -388,7 +388,7 @@
             this.guna2ShadowPanel5.Controls.Add(this.lbl_staff);
             this.guna2ShadowPanel5.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel5.Location = new System.Drawing.Point(1199, 737);
-            this.guna2ShadowPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel5.Name = "guna2ShadowPanel5";
             this.guna2ShadowPanel5.Radius = 10;
             this.guna2ShadowPanel5.ShadowColor = System.Drawing.Color.Black;
@@ -402,7 +402,7 @@
             this.guna2PictureBox5.Image = global::DAn_QLCuaHangBanthuoc.Properties.Resources.nurse21;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(32, 15);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(116, 102);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -428,7 +428,7 @@
             this.guna2ShadowPanel6.Controls.Add(this.label6);
             this.guna2ShadowPanel6.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel6.Location = new System.Drawing.Point(43, 625);
-            this.guna2ShadowPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ShadowPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ShadowPanel6.Name = "guna2ShadowPanel6";
             this.guna2ShadowPanel6.Radius = 10;
             this.guna2ShadowPanel6.ShadowColor = System.Drawing.Color.Black;
@@ -469,7 +469,7 @@
             this.dgv_batch.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_batch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_batch.Location = new System.Drawing.Point(4, 65);
-            this.dgv_batch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_batch.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_batch.Name = "dgv_batch";
             this.dgv_batch.RowHeadersVisible = false;
             this.dgv_batch.RowHeadersWidth = 51;
@@ -574,7 +574,7 @@
             "11",
             "12"});
             this.cbo_month.Location = new System.Drawing.Point(517, 50);
-            this.cbo_month.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_month.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_month.Name = "cbo_month";
             this.cbo_month.Size = new System.Drawing.Size(116, 36);
             this.cbo_month.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -596,14 +596,9 @@
             this.cbo_year.ItemHeight = 30;
             this.cbo_year.Items.AddRange(new object[] {
             "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030"});
+            "2025"});
             this.cbo_year.Location = new System.Drawing.Point(643, 50);
-            this.cbo_year.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_year.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_year.Name = "cbo_year";
             this.cbo_year.Size = new System.Drawing.Size(145, 36);
             this.cbo_year.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -667,7 +662,7 @@
             "3",
             "4"});
             this.cbo_quarter.Location = new System.Drawing.Point(392, 50);
-            this.cbo_quarter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_quarter.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_quarter.Name = "cbo_quarter";
             this.cbo_quarter.Size = new System.Drawing.Size(116, 36);
             this.cbo_quarter.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -702,7 +697,7 @@
             this.Controls.Add(this.guna2ShadowPanel2);
             this.Controls.Add(this.guna2ShadowPanel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_dashboard";
             this.Text = "frm_dashboard";
             this.guna2ShadowPanel1.ResumeLayout(false);

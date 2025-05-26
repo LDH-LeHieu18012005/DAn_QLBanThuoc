@@ -13,7 +13,7 @@ namespace BLL
         public BLL_sale() { }
         public DataTable GetDataSale(string keyword)
         {
-            return SqlDataAccess.GetDataFromTable($"View_Sale_Invoice_Details where name_staff like N'%{keyword}%' OR name_customer like N'%{keyword}%' OR status like N'%{keyword}%'");
+            return SqlDataAccess.GetDataFromTable($"View_Total_Amount_Per_Sale where name_staff like N'%{keyword}%' OR name_customer like N'%{keyword}%' OR status like N'%{keyword}%'");
         }
         public DataTable GetCustomer()
         {

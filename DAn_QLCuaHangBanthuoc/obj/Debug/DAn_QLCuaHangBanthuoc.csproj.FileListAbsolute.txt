@@ -159,3 +159,5 @@ C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Debug\zxing.presentation.xml
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Debug\ZXing.Windows.Compatibility.pdb
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Debug\ZXing.Windows.Compatibility.xml
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\obj\Debug\DAn_QLCuaHangBanthuoc.forgot_password.resources
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\obj\Debug\DAn_QLCuaHangBanthuoc.new_password.resources

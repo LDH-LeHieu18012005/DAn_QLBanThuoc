@@ -52,8 +52,13 @@ namespace DAn_QLCuaHangBanthuoc
             DataTable dataTable = statisticBLL.TopSale();
             if (dataTable.Rows.Count > 0)
             {
+                // Sắp xếp dữ liệu theo số lượng bán giảm dần
+                var sortedRows = dataTable.AsEnumerable()
+                    .OrderByDescending(row => Convert.ToInt32(row["TotalQuantitySold"]))
+                    .ToList();
+
                 ch_top.Series["Series1"].Points.Clear();
-                foreach (DataRow row in dataTable.Rows)
+                foreach (var row in sortedRows)
                 {
                     string tenSanPham = row["MedicineName"].ToString();
                     int tongSoLuongBan = Convert.ToInt32(row["TotalQuantitySold"]);
@@ -62,19 +67,28 @@ namespace DAn_QLCuaHangBanthuoc
                     var point = new DataPoint
                     {
                         YValues = new double[] { tongSoLuongBan }, // Quantity sold for pie chart
-                        LegendText = $"{tenSanPham}: {tongSoLuongBan:N0} Medicines",
-                        AxisLabel = tenSanPham,
-                        Label = $"{tenSanPham}\n{tongSoLuongBan:N0} ({tongDoanhThu:N0} VND)" // Label on pie slice
+                        LegendText = $"{tenSanPham}: {tongSoLuongBan:N0} ({tongDoanhThu / 1000000:N0}M VND)", // Rút gọn doanh thu
+                        AxisLabel = "", // Xóa nhãn trục
+                        Label = "" // Không hiển thị nhãn trên lát cắt
                     };
                     ch_top.Series["Series1"].Points.Add(point);
                 }
 
                 ch_top.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-                ch_top.Series["Series1"].IsValueShownAsLabel = true; // Show labels on pie slices
+                ch_top.Series["Series1"].IsValueShownAsLabel = false; // Tắt hiển thị nhãn trên lát cắt
                 ch_top.Legends[0].Enabled = true;
                 ch_top.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
                 ch_top.Legends[0].LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Table;
                 ch_top.Legends[0].TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Auto;
+
+                // Thêm tiêu đề cho chú thích
+                ch_top.Legends[0].Title = "Top Medicines by Sales";
+                ch_top.Legends[0].TitleAlignment = System.Drawing.StringAlignment.Center;
+                ch_top.Legends[0].TitleFont = new System.Drawing.Font("Arial", 11, System.Drawing.FontStyle.Bold);
+
+                // Tăng kích thước chữ của các mục trong chú thích
+                ch_top.Legends[0].Font = new System.Drawing.Font("Arial", 10, System.Drawing.FontStyle.Regular); // Tăng kích thước font lên 10
+
                 ch_top.ChartAreas[0].Area3DStyle.Enable3D = false; // Optional: Disable 3D for clarity
             }
             else
@@ -114,6 +128,9 @@ namespace DAn_QLCuaHangBanthuoc
                     Label = $"{revenue:N0} VNĐ"
                 };
                 ch_revenue.Series["Series1"].Points.Add(point);
+
+                // ✅ Hiện số trên cột khi có tháng cụ thể
+                ch_revenue.Series["Series1"].IsValueShownAsLabel = true;
             }
             else
             {
@@ -131,63 +148,73 @@ namespace DAn_QLCuaHangBanthuoc
 
                     var point = new DataPoint(i, revenue)
                     {
-                        LegendText = $"Tháng {i}: {revenue:N0} VNĐ",
-                        Label = $"{revenue:N0} VNĐ"
+                        LegendText = $"Tháng {i}: {revenue:N0} VNĐ"
+                        // ❌ Không thêm Label để ẩn số trên cột
                     };
                     ch_revenue.Series["Series1"].Points.Add(point);
                 }
+
+                // ❌ Không hiển thị giá trị trên cột khi hiển thị cả năm
+                ch_revenue.Series["Series1"].IsValueShownAsLabel = false;
             }
+
+            // Cấu hình biểu đồ chung
             ch_revenue.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            ch_revenue.Series["Series1"].IsValueShownAsLabel = true;
             ch_revenue.Legends[0].Enabled = true;
             ch_revenue.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
         }
+
+
         void CapNhatDoanhThuTheoQuy(int? quarter, int year)
         {
             DataTable dataTable = statisticBLL.TKDoanhThuTheoQuy(quarter, year);
-            ch_revenue.Series["Series1"].Points.Clear();
+            var series = ch_revenue.Series["Series1"];
+            series.Points.Clear();
+            series.ChartType = SeriesChartType.Column;
+            series.IsValueShownAsLabel = true;
+            series.Color = Color.Orange;
+            series.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            series.LabelForeColor = Color.DarkBlue;
 
             if (quarter.HasValue)
             {
-                DataRow row = dataTable.Rows.Count > 0 ? dataTable.Rows[0] : null;
-                int revenue = row != null && row["Doanh Thu"] != DBNull.Value
-                    ? Convert.ToInt32(row["Doanh Thu"])
+                int revenue = dataTable.Rows.Count > 0 && dataTable.Rows[0]["Doanh Thu"] != DBNull.Value
+                    ? Convert.ToInt32(dataTable.Rows[0]["Doanh Thu"])
                     : 0;
 
                 var point = new DataPoint(quarter.Value, revenue)
                 {
-                    LegendText = $"Quý {quarter.Value}: {revenue:N0} VNĐ",
-                    Label = $"{revenue:N0} VNĐ"
+                    Label = $"{revenue:N0} VNĐ",
+                    AxisLabel = $"Q{quarter.Value}",
+                    ToolTip = $"Quý {quarter.Value}: {revenue:N0} VNĐ"
                 };
-                ch_revenue.Series["Series1"].Points.Add(point);
+                series.Points.Add(point);
             }
             else
             {
-                int[] revenues = new int[4]; 
-
                 foreach (DataRow row in dataTable.Rows)
                 {
                     int quarterNumber = Convert.ToInt32(row["Quý"]);
                     int revenue = row["Doanh Thu"] != DBNull.Value ? Convert.ToInt32(row["Doanh Thu"]) : 0;
-                    revenues[quarterNumber - 1] = revenue;
-                }
 
-                for (int i = 1; i <= 4; i++)
-                {
-                    int revenue = revenues[i - 1];
-                    var point = new DataPoint(i, revenue)
+                    var point = new DataPoint(quarterNumber, revenue)
                     {
-                        LegendText = $"Quý {i}: {revenue:N0} VNĐ",
-                        Label = $"{revenue:N0} VNĐ"
+                        Label = $"{revenue:N0} VNĐ",
+                        AxisLabel = $"Q{quarterNumber}",
+                        ToolTip = $"Quý {quarterNumber}: {revenue:N0} VNĐ"
                     };
-                    ch_revenue.Series["Series1"].Points.Add(point);
+                    series.Points.Add(point);
                 }
             }
-            ch_revenue.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            ch_revenue.Series["Series1"].IsValueShownAsLabel = true;
-            ch_revenue.Legends[0].Enabled = true;
-            ch_revenue.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+
+            ch_revenue.ChartAreas[0].AxisX.Title = "Quý";
+            ch_revenue.ChartAreas[0].AxisY.Title = "Doanh thu (VNĐ)";
+            ch_revenue.ChartAreas[0].AxisX.LabelStyle.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+            ch_revenue.ChartAreas[0].AxisY.LabelStyle.Format = "#,##0 VNĐ";
+
+            ch_revenue.Legends[0].Enabled = false;
         }
+
         private void cbo_month_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbo_month.SelectedIndex != -1)

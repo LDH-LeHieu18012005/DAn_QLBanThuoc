@@ -1,4 +1,4 @@
-USE DAn_1_QLBanThuoc
+﻿USE DAn_1_QLBanThuoc
 GO
 
 CREATE OR ALTER VIEW View_Full_Medicine_Info AS
@@ -133,8 +133,27 @@ LEFT JOIN
 LEFT JOIN 
     Medicine m ON sd.id_medicine = m.id_medicine
 GO
-
- 
+CREATE OR ALTER VIEW View_Total_Amount_Per_Sale
+AS
+SELECT 
+    si.id_sale,
+    s.name_staff,
+    c.name_customer,
+    si.date_create,
+    si.status,
+    SUM(sd.quantity_sale * sd.price) AS total_amount
+FROM 
+    Sale_Invoice si
+LEFT JOIN 
+    Staff s ON si.id_staff = s.id_staff
+LEFT JOIN 
+    Customer c ON si.id_customer = c.id_customer
+LEFT JOIN 
+    Sale_details sd ON si.id_sale = sd.id_sale
+GROUP BY 
+    si.id_sale, s.name_staff, c.name_customer, si.date_create, si.status;
+select * from View_Total_Amount_Per_Sale
+ select * from Medicine
 CREATE OR ALTER VIEW View_Counts
 AS
 SELECT 
@@ -188,3 +207,17 @@ WHERE
         OR B.expiry_date < GETDATE() -- Already expired
     );
 GO
+DELETE FROM Sale_Invoice
+WHERE id_sale IN (1, 2, 3, 4, 6);
+
+select * from Sale_Invoice
+select * from Sale_details
+-- Gán ngày ngẫu nhiên từ 01/01/2024 đến 26/05/2025 cho các hóa đơn từ 11 đến 89
+UPDATE Sale_Invoice
+SET date_create = DATEADD(
+    DAY,
+    ABS(CHECKSUM(NEWID(), id_sale)) % DATEDIFF(DAY, '2024-01-01', '2025-05-26'),
+    '2024-01-01'
+)
+WHERE id_sale BETWEEN 11 AND 90;
+

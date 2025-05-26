@@ -144,5 +144,12 @@ namespace DAn_QLCuaHangBanthuoc
             txtTK.Clear();
             txtMK.Clear();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgot_password frm = new forgot_password();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

@@ -49,9 +49,49 @@ namespace DAn_QLCuaHangBanthuoc
         smoke_never, smoke_smokes
             };
         }
+        private bool ValidateInputs()
+        {
+            // Kiểm tra các ComboBox có được chọn hay không
+            if (cbGender.SelectedItem == null ||
+                cbMarried.SelectedItem == null ||
+                cbRes.SelectedItem == null ||
+                cbWork.SelectedItem == null ||
+                cbSmoke.SelectedItem == null)
+            {
+                MessageBox.Show("Please select all dropdown options.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // Kiểm tra các textbox có được nhập và hợp lệ hay không
+            if (string.IsNullOrWhiteSpace(txtAge.Text) ||
+                string.IsNullOrWhiteSpace(txtGlucose.Text) ||
+                string.IsNullOrWhiteSpace(txtBMI.Text))
+            {
+                MessageBox.Show("Please enter Age, Glucose level, and BMI.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // Kiểm tra dữ liệu nhập có phải số hợp lệ không
+            bool isAgeValid = float.TryParse(txtAge.Text, out float age);
+            bool isGlucoseValid = float.TryParse(txtGlucose.Text, out float glucose);
+            bool isBMIValid = float.TryParse(txtBMI.Text, out float bmi);
+
+            if (!isAgeValid || !isGlucoseValid || !isBMIValid)
+            {
+                MessageBox.Show("Age, Glucose, and BMI must be valid numbers.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
 
         private async void btnPredict_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputs())
+            {
+                // Nếu không hợp lệ thì thoát, không tiếp tục
+                return;
+            }
             var features = ProcessInputData();
 
             var requestData = new { features = features };

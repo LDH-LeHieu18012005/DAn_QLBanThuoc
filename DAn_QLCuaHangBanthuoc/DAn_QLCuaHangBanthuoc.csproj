@@ -34,6 +34,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo-Sức-khỏe-Biểu-tượng-Xanh-lam-Xanh-lá.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
@@ -143,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dgvtoExcel.cs" />
+    <Compile Include="forgot_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgot_password.Designer.cs">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_add_customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +276,12 @@
     <Compile Include="frm_type_medicine.Designer.cs">
       <DependentUpon>frm_type_medicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_password.Designer.cs">
+      <DependentUpon>new_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="predict.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +290,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forgot_password.resx">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_add_customer.resx">
       <DependentUpon>frm_add_customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_type_medicine.resx">
       <DependentUpon>frm_type_medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_password.resx">
+      <DependentUpon>new_password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="predict.resx">
       <DependentUpon>predict.cs</DependentUpon>
@@ -492,6 +517,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo-Sức-khỏe-Biểu-tượng-Xanh-lam-Xanh-lá.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

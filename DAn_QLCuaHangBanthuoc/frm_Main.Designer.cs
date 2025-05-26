@@ -46,7 +46,6 @@
             this.pn_top = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pn_left.SuspendLayout();
@@ -370,7 +369,6 @@
             // 
             this.pn_top.Controls.Add(this.guna2Panel2);
             this.pn_top.Controls.Add(this.label1);
-            this.pn_top.Controls.Add(this.btn_close);
             this.pn_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_top.Location = new System.Drawing.Point(0, 0);
             this.pn_top.Margin = new System.Windows.Forms.Padding(4);
@@ -398,26 +396,9 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pharmaceutical sales management software";
             // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BorderRadius = 10;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_close.IconColor = System.Drawing.Color.DimGray;
-            this.btn_close.Location = new System.Drawing.Point(1340, 9);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(47, 31);
-            this.btn_close.TabIndex = 0;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.btn_close;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // guna2DragControl2
@@ -462,7 +443,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_product;
         private Guna.UI2.WinForms.Guna2Panel pn_control;
         private Guna.UI2.WinForms.Guna2Panel pn_top;
-        private Guna.UI2.WinForms.Guna2ControlBox btn_close;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button btn_Staff;
         private Guna.UI2.WinForms.Guna2Panel pn_main;
