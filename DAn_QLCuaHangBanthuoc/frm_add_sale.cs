@@ -133,21 +133,21 @@ namespace DAn_QLCuaHangBanthuoc
 
             if (string.IsNullOrEmpty(selectedId))
             {
-                MessageBox.Show("Vui lòng nhập mã thuốc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter the medicine ID!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Kiểm tra mã thuốc có tồn tại không
+            // Check if the medicine ID exists
             if (!TableMedicine.Rows.Cast<DataRow>().Any(r => r["id_medicine"].ToString() == selectedId))
             {
-                MessageBox.Show("Mã thuốc không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Medicine ID does not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Kiểm tra trùng mã
+            // Check for duplicate ID
             if (ID_medicine.Contains(selectedId))
             {
-                MessageBox.Show("Thuốc đã được thêm vào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This medicine has already been added!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

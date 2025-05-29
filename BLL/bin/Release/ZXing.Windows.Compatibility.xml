@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZXing.Windows.Compatibility</name>
+    </assembly>
+    <members>
+        <member name="T:ZXing.Windows.Compatibility.AlternateBitmapRenderer">
+            <summary>
+            An alternative <see cref="T:ZXing.Windows.Compatibility.BitmapRenderer" /> that gives a better looking result for
+            EAN-8, EAN-13, UPC-A and UPC-E barcodes <b>with</b> text.
+            </summary>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.AlternateBitmapRenderer.FontVersion">
+            <summary>
+            This renderer uses smaller font versions for UPC labels. This enum stores info for use of that.
+            </summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.FontVersion.Small">
+            <summary>
+            Use small version of the font
+            </summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.FontVersion.Normal">
+            <summary>
+            Use normal version
+            </summary>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo">
+             <summary>
+             For each type of barcode this struct contains all the info on how to split the text content
+             into blocks and where to print those blocks with respect to the start of the barcode, which
+             is dynamicly determined while printing the bars.
+            
+             A 'real' barcode consists of an start-section, a number of bars of constant width (7 units for
+             EAN and UPC codes), optionally a middle-section and another number of bars, and and end-section.
+             Start-section, middle-section and end-section may have different widths.
+             E.g. an EAN-13 baecode has a 3 units wide start, 6 bars of 7 wide, a 5 wide middle-section
+             anothers 6 bars of 7 wide and a 3 wide end-section for a total of 95 units.
+             </summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.TextLength">
+            <summary>Required length of text</summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.Units">
+            <summary>Total width of barcode in units</summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.TextIndex">
+            <summary>Start of a text block in contents</summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.Version">
+            <summary>Which font to use for block</summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.PrintIndex">
+            <summary>Index in barcode units for printing. If -1, align before barcode</summary>
+        </member>
+        <member name="F:ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo.PrintWidth">
+            <summary>Width of block to clear in barcode units</summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.AlternateBitmapRenderer.#cctor">
+            <summary>
+            Static constructor, sets defaults
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.AlternateBitmapRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.AlternateBitmapRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.AlternateBitmapRenderer.Render(ZXing.Common.BitMatrix,ZXing.BarcodeFormat,System.String,ZXing.Common.EncodingOptions)">
+            <summary>
+            Overrides the drawing methods for EAN-8, EAN-13, UPC-A and UPC-E barcodes.
+            For other types it chains to the original renderer.
+            </summary>
+            <param name="matrix">The matrix with the pre-rendered data.</param>
+            <param name="format">The <see cref="T:ZXing.BarcodeFormat" />.</param>
+            <param name="content">The textual description of the code.</param>
+            <param name="options">The options for rendering.</param>
+            <returns>A Windows Bitmap containing the barcode.</returns>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.AlternateBitmapRenderer.printTexts(System.Drawing.Graphics,System.String,ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo,System.Drawing.Font,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draws the text part of the barcode bitmap.
+            </summary>
+            <param name="canvas">The grapics context to draw on.</param>
+            <param name="content">Barcode text</param>
+            <param name="info">Print specifications</param>
+            <param name="font">The selected font</param>
+            <param name="start">Position of first a bar in pixels</param>
+            <param name="end">Last position of a bar in pixels</param>
+            <param name="top">Top of text in pixels</param>
+            <param name="height">Height of text in pixels</param>
+            <returns>Success</returns>
+            <throws><see cref="T:System.ArgumentException" /> when no space for required text.</throws>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.AlternateBitmapRenderer.contentGroups(System.String,ZXing.Windows.Compatibility.AlternateBitmapRenderer.PrintInfo)">
+            <summary>
+            Split content in seperate groups for pretty printing
+            </summary>
+            <param name="content">The content string</param>
+            <param name="info">The printing info</param>
+            <returns>One or more content group strings</returns>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.BitmapRenderer">
+            <summary>
+            Renders a <see cref="T:ZXing.Common.BitMatrix" /> to a <see cref="T:System.Drawing.Bitmap" /> image
+            </summary>
+        </member>
+        <member name="P:ZXing.Windows.Compatibility.BitmapRenderer.Foreground">
+            <summary>
+            Gets or sets the foreground color.
+            </summary>
+            <value>The foreground color.</value>
+        </member>
+        <member name="P:ZXing.Windows.Compatibility.BitmapRenderer.Background">
+            <summary>
+            Gets or sets the background color.
+            </summary>
+            <value>The background color.</value>
+        </member>
+        <member name="P:ZXing.Windows.Compatibility.BitmapRenderer.DpiX">
+            <summary>
+            Gets or sets the resolution which should be used to create the bitmap
+            If nothing is set the current system settings are used
+            </summary>
+        </member>
+        <member name="P:ZXing.Windows.Compatibility.BitmapRenderer.DpiY">
+            <summary>
+            Gets or sets the resolution which should be used to create the bitmap
+            If nothing is set the current system settings are used
+            </summary>
+        </member>
+        <member name="P:ZXing.Windows.Compatibility.BitmapRenderer.TextFont">
+            <summary>
+            Gets or sets the text font.
+            </summary>
+            <value>
+            The text font.
+            </value>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BitmapRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapRenderer.Render(ZXing.Common.BitMatrix,ZXing.BarcodeFormat,System.String)">
+            <summary>
+            Renders the specified matrix.
+            </summary>
+            <param name="matrix">The matrix.</param>
+            <param name="format">The format.</param>
+            <param name="content">The content.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapRenderer.Render(ZXing.Common.BitMatrix,ZXing.BarcodeFormat,System.String,ZXing.Common.EncodingOptions)">
+            <summary>
+            Renders the specified matrix.
+            </summary>
+            <param name="matrix">The matrix.</param>
+            <param name="format">The format.</param>
+            <param name="content">The content.</param>
+            <param name="options">The options.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.BitmapLuminanceSource">
+            <summary>
+            class which represents the luminance values for a bitmap object
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BitmapLuminanceSource"/> class.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.#ctor(System.Drawing.Bitmap)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BitmapLuminanceSource"/> class
+            with the image of a Bitmap instance
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues(System.Drawing.Bitmap,System.Byte[])">
+            <summary>
+            calculates the luminance values for bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValuesSlow(System.Drawing.Bitmap,System.Byte[])">
+            <summary>
+            old slow way for unsupported bit depth
+            </summary>
+            <param name="bitmap"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValuesForIndexed1Bit(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 1-bit indexed bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValuesForIndexed4Bit(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 4-bit indexed bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValuesForIndexed8Bit(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 8-bit indexed bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues565(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 565 encoded bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues24Bit(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 24-bit encoded bitmaps
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues32BitWithoutAlpha(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            <summary>
+            calculates the luminance values for 32-bit encoded bitmaps without respecting the alpha channel
+            </summary>
+            <param name="bitmap"></param>
+            <param name="data"></param>
+            <param name="luminances"></param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues32BitWithAlpha(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            calculates the luminance values for 32-bit encoded bitmaps with alpha channel
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CalculateLuminanceValues32BitCMYK(System.Drawing.Bitmap,System.Drawing.Imaging.BitmapData,System.Byte[])">
+            calculates the luminance values for 32-bit CMYK encoded bitmaps (k is ignored at the momen)
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BitmapLuminanceSource.CreateLuminanceSource(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Should create a new luminance source with the right class type.
+            The method is used in methods crop and rotate.
+            </summary>
+            <param name="newLuminances">The new luminances.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.BarcodeWriter">
+            <summary>
+            A smart class to encode some content to a barcode image
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BarcodeWriter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ZXing.Windows.Compatibility.BarcodeReader">
+            <summary>
+            A smart class to decode the barcode inside a bitmap object
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BarcodeReader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BarcodeReader"/> class.
+            </summary>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BarcodeReader.#ctor(ZXing.Reader,System.Func{System.Drawing.Bitmap,ZXing.LuminanceSource},System.Func{ZXing.LuminanceSource,ZXing.Binarizer})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BarcodeReader"/> class.
+            </summary>
+            <param name="reader">Sets the reader which should be used to find and decode the barcode.
+            If null then MultiFormatReader is used</param>
+            <param name="createLuminanceSource">Sets the function to create a luminance source object for a bitmap.
+            If null, an exception is thrown when Decode is called</param>
+            <param name="createBinarizer">Sets the function to create a binarizer object for a luminance source.
+            If null then HybridBinarizer is used</param>
+        </member>
+        <member name="M:ZXing.Windows.Compatibility.BarcodeReader.#ctor(ZXing.Reader,System.Func{System.Drawing.Bitmap,ZXing.LuminanceSource},System.Func{ZXing.LuminanceSource,ZXing.Binarizer},System.Func{System.Byte[],System.Int32,System.Int32,ZXing.RGBLuminanceSource.BitmapFormat,ZXing.LuminanceSource})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZXing.Windows.Compatibility.BarcodeReader"/> class.
+            </summary>
+            <param name="reader">Sets the reader which should be used to find and decode the barcode.
+            If null then MultiFormatReader is used</param>
+            <param name="createLuminanceSource">Sets the function to create a luminance source object for a bitmap.
+            If null, an exception is thrown when Decode is called</param>
+            <param name="createBinarizer">Sets the function to create a binarizer object for a luminance source.
+            If null then HybridBinarizer is used</param>
+            <param name="createRGBLuminanceSource">Sets the function to create a luminance source object for a rgb raw byte array.</param>
+        </member>
+        <member name="T:ZXing.BarcodeWriterExtensions">
+            <summary>
+            extensions methods which are working directly on any BarcodeWriterGeneric implementation
+            </summary>
+        </member>
+        <member name="M:ZXing.BarcodeWriterExtensions.WriteAsBitmap(ZXing.IBarcodeWriterGeneric,System.String)">
+            <summary>
+            uses the BarcodeWriterGeneric implementation and the <see cref="T:ZXing.Windows.Compatibility.BitmapRenderer"/> class for decoding
+            </summary>
+            <param name="writer"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZXing.BarcodeReaderExtensions">
+            <summary>
+            extensions methods which are working directly on any IBarcodeReaderGeneric implementation
+            </summary>
+        </member>
+        <member name="M:ZXing.BarcodeReaderExtensions.Decode(ZXing.IBarcodeReaderGeneric,System.Drawing.Bitmap)">
+            <summary>
+            uses the IBarcodeReaderGeneric implementation and the <see cref="T:ZXing.Windows.Compatibility.BitmapLuminanceSource"/> class for decoding
+            </summary>
+            <param name="reader"></param>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZXing.BarcodeReaderExtensions.DecodeMultiple(ZXing.IBarcodeReaderGeneric,System.Drawing.Bitmap)">
+            <summary>
+            uses the IBarcodeReaderGeneric implementation and the <see cref="T:ZXing.Windows.Compatibility.BitmapLuminanceSource"/> class for decoding
+            </summary>
+            <param name="reader"></param>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

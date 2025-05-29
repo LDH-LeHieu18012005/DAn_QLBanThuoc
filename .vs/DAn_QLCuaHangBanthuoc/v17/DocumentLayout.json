@@ -3,22 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\forgot_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\forgot_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\dan_qlcuahangbanthuoc\\forgot_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\forgot_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\dan_qlcuahangbanthuoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11262228-A1B5-432F-8E27-493624094596}|DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc.csproj|solutionrelative:dan_qlcuahangbanthuoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BLL||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66638DCE-8E7C-4BC2-942E-C6F4A0C58BCE}|BLL\\BLL.csproj|c:\\users\\dell\\desktop\\dan_qlbanthuoc\\dan_qlcuahangbanthuoc\\bll\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,15 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BLL",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL.csproj",
-              "RelativeDocumentMoniker": "BLL\\BLL.csproj",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\BLL\\BLL.csproj",
-              "RelativeToolTip": "BLL\\BLL.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-26T15:24:52.903Z",
+              "DocumentIndex": 0,
+              "Title": "forgot_password.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwG0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:07:19.533Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "forgot_password.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\forgot_password.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\forgot_password.cs [Design]",
+              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\forgot_password.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:05:31.514Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -62,31 +69,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T14:41:55.705Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAuwIQAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:25:38.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frm_dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "RelativeDocumentMoniker": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\DAn_QLBanThuoc\\DAn_QLCuaHangBanthuoc\\DAn_QLCuaHangBanthuoc\\frm_dashboard.cs [Design]",
-              "RelativeToolTip": "DAn_QLCuaHangBanthuoc\\frm_dashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:23:40.648Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

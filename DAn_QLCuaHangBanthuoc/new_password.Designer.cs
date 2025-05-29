@@ -106,7 +106,7 @@
             this.txtnewpass.PlaceholderText = "";
             this.txtnewpass.SelectedText = "";
             this.txtnewpass.Size = new System.Drawing.Size(373, 44);
-            this.txtnewpass.TabIndex = 35;
+            this.txtnewpass.TabIndex = 16;
             // 
             // btn_exit
             // 
@@ -185,10 +185,11 @@
             this.txtpass.Location = new System.Drawing.Point(205, 331);
             this.txtpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
             this.txtpass.PlaceholderText = "";
             this.txtpass.SelectedText = "";
             this.txtpass.Size = new System.Drawing.Size(373, 44);
-            this.txtpass.TabIndex = 16;
+            this.txtpass.TabIndex = 17;
             // 
             // label1
             // 

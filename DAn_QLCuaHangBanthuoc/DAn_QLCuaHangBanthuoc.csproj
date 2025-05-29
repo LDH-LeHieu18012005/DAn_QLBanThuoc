@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Logo-Sức-khỏe-Biểu-tượng-Xanh-lam-Xanh-lá.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
@@ -517,9 +518,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Logo-Sức-khỏe-Biểu-tượng-Xanh-lam-Xanh-lá.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

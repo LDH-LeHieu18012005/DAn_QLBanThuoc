@@ -78,10 +78,39 @@ namespace DAn_QLCuaHangBanthuoc
 
             return exists;
         }
+        private bool IsEmailExists(string email, string username)
+        {
+            bool exists = false;
+            string connectionString = @"Data Source=LEHIEU\LEHIEU;Initial Catalog=DAn_1_QLBanThuoc;Integrated Security=True;TrustServerCertificate=True";
 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Staff WHERE gmail = @Email AND username = @Username";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    try
+                    {
+                        conn.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        exists = count > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error checking email and username: " + ex.Message);
+                    }
+                }
+            }
+
+            return exists;
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string emailInput = txtemail.Text.Trim();
+            string usernameInput = txtTK.Text.Trim();
 
             if (string.IsNullOrEmpty(emailInput))
             {
@@ -89,15 +118,21 @@ namespace DAn_QLCuaHangBanthuoc
                 return;
             }
 
-            // Kiểm tra email trong CSDL
-            if (IsEmailExists(emailInput))
+            if (string.IsNullOrEmpty(usernameInput))
+            {
+                MessageBox.Show("Please enter your username.");
+                return;
+            }
+
+            // Kiểm tra email và username trong CSDL
+            if (IsEmailExists(emailInput, usernameInput))
             {
                 currentOtp = GenerateOtp();
                 SendOtpToEmail(emailInput, currentOtp);
             }
             else
             {
-                MessageBox.Show("Email does not exist in the system.");
+                MessageBox.Show("This email does not belong to the provided username!");
             }
         }
 
