@@ -243,8 +243,9 @@ namespace DAn_QLCuaHangBanthuoc
             }
         }
 
-        private void btn_new_sale_Click(object sender, EventArgs e)
+        private async void btn_new_sale_Click(object sender, EventArgs e)
         {
+            await StopCameraAsync();
             if (dgv_data.Rows.Count == 0 || (dgv_data.Rows.Count == 1 && dgv_data.Rows[0].IsNewRow))
             {
                 MessageBox.Show("Please add at least one product to the invoice!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
