@@ -14,7 +14,7 @@ using ZXing.QrCode;
 using ZXing.Windows.Compatibility;
 using AForge.Video;
 using AForge.Video.DirectShow;
-
+using ZXing.Common;
 
 namespace DAn_QLCuaHangBanthuoc
 {
@@ -28,6 +28,7 @@ namespace DAn_QLCuaHangBanthuoc
         FilterInfoCollection FilterInfoCollection;
         VideoCaptureDevice videocaptureDevice;
         private bool isCameraRunning;
+        private string lastScannedId = null; // Biến tạm để theo dõi mã vạch gần nhất
 
         public frm_add_sale(frm_Main mainForm)
         {
@@ -36,6 +37,7 @@ namespace DAn_QLCuaHangBanthuoc
             bll = new BLL_sale();
             load();
         }
+
         void load()
         {
             DataTable staff = bll.GetStaff();
@@ -66,35 +68,111 @@ namespace DAn_QLCuaHangBanthuoc
             FilterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo device in FilterInfoCollection)
                 cmbmayanh.Items.Add(device.Name);
-            cmbmayanh.SelectedIndex = 0;
+            if (cmbmayanh.Items.Count > 0)
+                cmbmayanh.SelectedIndex = 0;
+            else
+                MessageBox.Show("Không tìm thấy camera!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        private void CaptureDevice_Newfame(object sender, NewFrameEventArgs eventArgs)
+
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            var reader = new ZXing.BarcodeReader();
-            reader.Options.PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE, BarcodeFormat.CODE_128, BarcodeFormat.EAN_13 };
-            // Nếu bạn chỉ quét QR thì chỉ giữ QR_CODE cũng được
-
-
-            var result = reader.Decode(bitmap);
-            if (result != null)
+            try
             {
-                txt_medicineID.Invoke(new MethodInvoker(delegate ()
+                Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+                if (bitmap != null)
                 {
-                    txt_medicineID.Text = result.ToString();
-                }));
+                    var reader = new ZXing.BarcodeReader
+                    {
+                        AutoRotate = true,
+                        Options = new DecodingOptions
+                        {
+                            PossibleFormats = new List<BarcodeFormat>
+                            {
+                                BarcodeFormat.QR_CODE,
+                                BarcodeFormat.CODE_128,
+                                BarcodeFormat.EAN_13,
+                                BarcodeFormat.EAN_8,
+                                BarcodeFormat.UPC_A,
+                                BarcodeFormat.UPC_E
+                            },
+                            TryHarder = true,
+                            TryInverted = true,
+                            PureBarcode = false
+                        }
+                    };
+
+                    var result = reader.Decode(bitmap);
+                    if (result != null)
+                    {
+                        string scannedId = result.Text.Trim();
+                        if (scannedId != lastScannedId) // Chỉ xử lý nếu mã mới
+                        {
+                            if (txt_medicineID.InvokeRequired)
+                            {
+                                txt_medicineID.Invoke(new MethodInvoker(() =>
+                                {
+                                    txt_medicineID.Text = scannedId;
+                                    // Tự động thêm vào danh sách nếu mã hợp lệ và chưa tồn tại
+                                    if (!string.IsNullOrEmpty(scannedId) && TableMedicine.Rows.Cast<DataRow>().Any(r => r["id_medicine"].ToString() == scannedId))
+                                    {
+                                        AddMedicineToGrid(scannedId);
+                                    }
+                                }));
+                            }
+                            else
+                            {
+                                txt_medicineID.Text = scannedId;
+                                if (!string.IsNullOrEmpty(scannedId) && TableMedicine.Rows.Cast<DataRow>().Any(r => r["id_medicine"].ToString() == scannedId))
+                                {
+                                    AddMedicineToGrid(scannedId);
+                                }
+                            }
+                            lastScannedId = scannedId; // Cập nhật mã vạch gần nhất
+                        }
+                        Console.WriteLine($"Read the code: {scannedId}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Barcode cannot be read!!");
+                    }
+                }
+                if (bitmap != null) bitmap.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Barcode scanning error: {ex.Message}");
             }
         }
+
+        private void AddMedicineToGrid(string selectedId)
+        {
+            if (!ID_medicine.Contains(selectedId))
+            {
+                foreach (DataRow row in TableMedicine.Rows)
+                {
+                    if (selectedId == row["id_medicine"].ToString())
+                    {
+                        dgv_data.Rows.Add(row["name_medicine"], 1, row["price"]);
+                        ID_medicine.Add(selectedId);
+                        stock_quantity.Add(Convert.ToInt32(row["total_quantity"]));
+                        UpdateTotalAmount();
+                        txt_medicineID.Clear(); // Xóa text sau khi thêm
+                        break;
+                    }
+                }
+            }
+            // Loại bỏ MessageBox ở đây
+        }
+
         private async Task StopCameraAsync()
         {
-            // Dừng camera một cách an toàn trong luồng riêng biệt
             if (isCameraRunning && videocaptureDevice != null)
             {
                 try
                 {
                     videocaptureDevice.SignalToStop();
-                    await Task.Run(() => videocaptureDevice.WaitForStop());  // Chờ camera dừng lại hoàn toàn
-                    videocaptureDevice.NewFrame -= CaptureDevice_Newfame; // Gỡ sự kiện
+                    await Task.Run(() => videocaptureDevice.WaitForStop());
+                    videocaptureDevice.NewFrame -= CaptureDevice_NewFrame;
                     isCameraRunning = false;
                     Console.WriteLine("Camera stopped...");
                 }
@@ -108,6 +186,7 @@ namespace DAn_QLCuaHangBanthuoc
                 Console.WriteLine("No camera to stop.");
             }
         }
+
         private void btn_close_Click(object sender, EventArgs e)
         {
             _mainForm.container(new frm_sale(_mainForm));
@@ -120,13 +199,14 @@ namespace DAn_QLCuaHangBanthuoc
             {
                 if (!row.IsNewRow)
                 {
-                    int quantity = Convert.ToInt32(row.Cells[1].Value); 
-                    decimal price = Convert.ToDecimal(row.Cells[2].Value); 
+                    int quantity = Convert.ToInt32(row.Cells[1].Value);
+                    decimal price = Convert.ToDecimal(row.Cells[2].Value);
                     totalAmount += quantity * price;
                 }
             }
             lbl_price.Text = totalAmount.ToString("N0") + " VND";
         }
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             string selectedId = txt_medicineID.Text.Trim();
@@ -137,33 +217,13 @@ namespace DAn_QLCuaHangBanthuoc
                 return;
             }
 
-            // Check if the medicine ID exists
             if (!TableMedicine.Rows.Cast<DataRow>().Any(r => r["id_medicine"].ToString() == selectedId))
             {
                 MessageBox.Show("Medicine ID does not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Check for duplicate ID
-            if (ID_medicine.Contains(selectedId))
-            {
-                MessageBox.Show("This medicine has already been added!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Thêm thuốc
-            foreach (DataRow row in TableMedicine.Rows)
-            {
-                if (selectedId == row["id_medicine"].ToString())
-                {
-                    dgv_data.Rows.Add(row["name_medicine"], 1, row["price"]);
-                    ID_medicine.Add(selectedId);
-                    stock_quantity.Add(Convert.ToInt32(row["total_quantity"]));
-                    UpdateTotalAmount();
-                    txt_medicineID.Clear(); // Xóa text sau khi thêm
-                    return;
-                }
-            }
+            AddMedicineToGrid(selectedId);
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -200,7 +260,7 @@ namespace DAn_QLCuaHangBanthuoc
                 MessageBox.Show("Please select a customer!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
             for (int i = 0; i < dgv_data.Rows.Count - 1; i++)
             {
                 if (!int.TryParse(dgv_data.Rows[i].Cells[1].Value?.ToString(), out int quantity) || quantity < 1)
@@ -222,11 +282,11 @@ namespace DAn_QLCuaHangBanthuoc
                     bll.AddRecord(cbo_staff.SelectedValue.ToString(), cbo_customer.SelectedValue.ToString());
                     string idHDBnew = bll.GetIDHDB();
 
-                    for (int i = 0; i < dgv_data.Rows.Count - 1; i++) 
+                    for (int i = 0; i < dgv_data.Rows.Count - 1; i++)
                     {
-                        string idMedicine = ID_medicine[i]; 
-                        string quantity = dgv_data.Rows[i].Cells[1].Value.ToString(); 
-                        string price = dgv_data.Rows[i].Cells[2].Value.ToString(); 
+                        string idMedicine = ID_medicine[i];
+                        string quantity = dgv_data.Rows[i].Cells[1].Value.ToString();
+                        string price = dgv_data.Rows[i].Cells[2].Value.ToString();
                         bll.AddDetails(idHDBnew, idMedicine, quantity, price);
                     }
                     MessageBox.Show("Invoice created successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -239,25 +299,6 @@ namespace DAn_QLCuaHangBanthuoc
                 {
                     MessageBox.Show($"Error creating invoice: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-        }
-
-        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            var reader = new ZXing.BarcodeReader
-            {
-                AutoRotate = true,
-                Options = { PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE, BarcodeFormat.CODE_128, BarcodeFormat.EAN_13 } }
-            };
-            var result = reader.Decode(bitmap);
-
-            if (result != null)
-            {
-                txt_medicineID.Invoke(new MethodInvoker(() =>
-                {
-                    txt_medicineID.Text = result.Text;
-                }));
             }
         }
 
@@ -277,8 +318,16 @@ namespace DAn_QLCuaHangBanthuoc
                 {
                     videocaptureDevice = new VideoCaptureDevice(selectedCamera.MonikerString);
                     videocaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                    VideoCapabilities[] capabilities = videocaptureDevice.VideoCapabilities;
+                    if (capabilities.Length > 0)
+                    {
+                        VideoCapabilities cap = capabilities.FirstOrDefault(c => c.FrameSize.Width == 320 && c.FrameSize.Height == 240) ?? capabilities[0];
+                        videocaptureDevice.VideoResolution = cap;
+                        Console.WriteLine($"Selected resolution: {cap.FrameSize.Width}x{cap.FrameSize.Height}");
+                    }
                     videocaptureDevice.Start();
                     isCameraRunning = true;
+                    Console.WriteLine("Camera started...");
                 }
             }
         }
@@ -298,6 +347,11 @@ namespace DAn_QLCuaHangBanthuoc
         private void btnStartCamera_Click_1(object sender, EventArgs e)
         {
             StartCamera();
+        }
+
+        private async void frm_add_sale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            await StopCameraAsync();
         }
     }
 }

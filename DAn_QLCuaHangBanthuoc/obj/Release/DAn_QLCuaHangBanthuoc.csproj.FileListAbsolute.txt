@@ -92,3 +92,5 @@ C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Release\zxing.presentation.xml
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Release\ZXing.Windows.Compatibility.pdb
 C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\bin\Release\ZXing.Windows.Compatibility.xml
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\obj\Release\DAn_QLCuaHangBanthuoc.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Desktop\DAn_QLBanThuoc\DAn_QLCuaHangBanthuoc\DAn_QLCuaHangBanthuoc\obj\Release\DAn_QLCuaHangBanthuoc.exe.config

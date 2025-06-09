@@ -28,11 +28,6 @@
             Gets the nb layers.
             </summary>
         </member>
-        <member name="P:ZXing.Aztec.Internal.AztecDetectorResult.ErrorsCorrected">
-            <summary>
-            Gets the number of corrected errors.
-            </summary>
-        </member>
         <member name="M:ZXing.Aztec.Internal.AztecDetectorResult.#ctor(ZXing.Common.BitMatrix,ZXing.ResultPoint[],System.Boolean,System.Int32,System.Int32)">
             <summary>
             Initializes a new instance of the <see cref="T:ZXing.Aztec.Internal.AztecDetectorResult"/> class.
@@ -42,17 +37,6 @@
             <param name="compact">if set to <c>true</c> [compact].</param>
             <param name="nbDatablocks">The nb datablocks.</param>
             <param name="nbLayers">The nb layers.</param>
-        </member>
-        <member name="M:ZXing.Aztec.Internal.AztecDetectorResult.#ctor(ZXing.Common.BitMatrix,ZXing.ResultPoint[],System.Boolean,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ZXing.Aztec.Internal.AztecDetectorResult"/> class.
-            </summary>
-            <param name="bits">The bits.</param>
-            <param name="points">The points.</param>
-            <param name="compact">if set to <c>true</c> [compact].</param>
-            <param name="nbDatablocks">The nb datablocks.</param>
-            <param name="nbLayers">The nb layers.</param>
-            <param name="errorsCorrected"></param>
         </member>
         <member name="T:ZXing.Aztec.Internal.Decoder">
             <summary>
@@ -162,12 +146,11 @@
             encapsulating results of detecting an Aztec Code
             </returns>
         </member>
-        <member name="M:ZXing.Aztec.Internal.Detector.extractParameters(ZXing.ResultPoint[],System.Int32@)">
+        <member name="M:ZXing.Aztec.Internal.Detector.extractParameters(ZXing.ResultPoint[])">
             <summary>
             Extracts the number of data layers and data blocks from the layer around the bull's eye 
             </summary>
             <param name="bullsEyeCorners">bullEyeCornerPoints the array of bull's eye corners</param>
-            <param name="errorsCorrected">the number of errors corrected during parameter extraction</param>
             <returns></returns>
         </member>
         <member name="M:ZXing.Aztec.Internal.Detector.getCorrectedParameterData(System.Int64,System.Boolean)">
@@ -176,7 +159,7 @@
             </summary>
             <param name="parameterData">paremeter bits</param>
             <param name="compact">compact true if this is a compact Aztec code</param>
-            <returns>the corrected parameter</returns>
+            <returns></returns>
         </member>
         <member name="M:ZXing.Aztec.Internal.Detector.getBullsEyeCorners(ZXing.Aztec.Internal.Detector.Point)">
             <summary>
@@ -2741,9 +2724,14 @@
             <returns>index of next unset bit, or <see cref="P:ZXing.Common.BitArray.Size"/> if none are unset until the end</returns>
         </member>
         <member name="M:ZXing.Common.BitArray.setBulk(System.Int32,System.Int32)">
-            <summary> Sets a block of 32 bits, starting at bit i.</summary>
-            <param name="blockIndex">index position of the new 32 bit block</param>
-            <param name="newBits">the new value of the next 32 bits.</param>
+            <summary> Sets a block of 32 bits, starting at bit i.
+            
+            </summary>
+            <param name="i">first bit to set
+            </param>
+            <param name="newBits">the new value of the next 32 bits. Note again that the least-significant bit
+            corresponds to bit i, the next-least-significant to i+1, and so on.
+            </param>
         </member>
         <member name="M:ZXing.Common.BitArray.setRange(System.Int32,System.Int32)">
             <summary>
@@ -3121,20 +3109,15 @@
             </returns>
         </member>
         <member name="T:ZXing.Common.CharacterSetECI">
-            <summary>
-            Encapsulates a Character Set ECI, according to "Extended Channel Interpretations" 5.3.1.1 of ISO 18004.
+            <summary> Encapsulates a Character Set ECI, according to "Extended Channel Interpretations" 5.3.1.1
+            of ISO 18004.
+            
             </summary>
             <author>Sean Owen</author>
         </member>
         <member name="P:ZXing.Common.CharacterSetECI.EncodingName">
             <summary>
             encoding name
-            </summary>
-        </member>
-        <member name="P:ZXing.Common.CharacterSetECI.Encoding">
-            <summary>
-            contains get encoding class;
-            can be set externally if override is necessary
             </summary>
         </member>
         <member name="M:ZXing.Common.CharacterSetECI.getCharacterSetECIByValue(System.Int32)">
@@ -3298,20 +3281,6 @@
             <param name="saSequence"></param>
             <param name="saParity"></param>
             <param name="symbologyModifier"></param>
-        </member>
-        <member name="M:ZXing.Common.DecoderResult.#ctor(System.Byte[],System.Nullable{System.Int32},System.String,System.Collections.Generic.IList{System.Byte[]},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            initializing constructor
-            </summary>
-            <param name="rawBytes"></param>
-            <param name="numBits"></param>
-            <param name="text"></param>
-            <param name="byteSegments"></param>
-            <param name="ecLevel"></param>
-            <param name="saSequence"></param>
-            <param name="saParity"></param>
-            <param name="symbologyModifier"></param>
-            <param name="errorsCorrected"></param>
         </member>
         <member name="T:ZXing.Common.DecodingOptions">
             <summary>
@@ -4384,10 +4353,8 @@
               <p>This class contains utility methods for performing mathematical operations over
             the Galois Fields. Operations use a given primitive polynomial in calculations.</p>
               <p>Throughout this package, elements of the GF are represented as an {@code int}
-            for convenience and speed (but at the cost of memory).</p>
-            
-            <p>The size of the GF is assumed to be a power of two.</p>
-            
+            for convenience and speed (but at the cost of memory).
+              </p>
             </summary>
             <author>Sean Owen</author>
         </member>
@@ -4587,17 +4554,6 @@
             <param name="twoS">number of error-correction codewords available</param>
             <returns>false: decoding fails</returns>
         </member>
-        <member name="M:ZXing.Common.ReedSolomon.ReedSolomonDecoder.decodeWithECCount(System.Int32[],System.Int32,System.Int32@)">
-            <summary>
-            Decodes given set of received codewords, which include both data and error-correction
-            codewords.Really, this means it uses Reed-Solomon to detect and correct errors, in-place,
-            in the input.
-            </summary>
-            <param name="received">data and error-correction codewords</param>
-            <param name="twoS">number of error-correction codewords available</param>
-            <param name="errorsCorrected">the number of errors corrected</param>
-            <returns>false: decoding fails</returns>
-        </member>
         <member name="T:ZXing.Common.ReedSolomon.ReedSolomonEncoder">
             <summary>
             Implements Reed-Solomon encoding, as the name implies.
@@ -4653,16 +4609,6 @@
         <member name="F:ZXing.Common.StringUtils.ISO88591_ENCODING">
             <summary>
             ISO8859-1 encoding if available
-            </summary>
-        </member>
-        <member name="F:ZXing.Common.StringUtils.JIS_IS_SUPPORTED">
-            <summary>
-            JIS_IS is supported or not
-            </summary>
-        </member>
-        <member name="F:ZXing.Common.StringUtils.EUC_JP_IS_SUPPORTED">
-            <summary>
-            EUC_JP is supported or not
             </summary>
         </member>
         <member name="F:ZXing.Common.StringUtils.SHIFT_JIS">
@@ -5022,14 +4968,14 @@
             <param name="bits">booleans representing white/black Data Matrix Code modules</param>
             <returns>text and bytes encoded within the Data Matrix Code</returns>
         </member>
-        <member name="M:ZXing.Datamatrix.Internal.Decoder.correctErrors(System.Byte[],System.Int32,System.Int32@)">
-            <summary>
-            Given data and error-correction codewords received, possibly corrupted by errors, attempts to
-            correct the errors in-place using Reed-Solomon error correction.
-            <param name="codewordBytes">data and error correction codewords</param>
-            <param name="numDataCodewords">number of codewords that are data bytes</param>
-            <param name="errorsCorrected">the number of errors corrected</param>
-            </summary>
+        <member name="M:ZXing.Datamatrix.Internal.Decoder.correctErrors(System.Byte[],System.Int32)">
+             <summary>
+             <p>Given data and error-correction codewords received, possibly corrupted by errors, attempts to
+             correct the errors in-place using Reed-Solomon error correction.</p>
+            
+             <param name="codewordBytes">data and error correction codewords</param>
+             <param name="numDataCodewords">number of codewords that are data bytes</param>
+             </summary>
         </member>
         <member name="T:ZXing.Datamatrix.Internal.Version">
              <summary>
@@ -7937,12 +7883,6 @@
             Superclass of <see cref="T:ZXing.OneD.OneDReader" /> implementations that read barcodes in the RSS family of formats.
             </summary>
         </member>
-        <member name="F:ZXing.OneD.RSS.AbstractRSSReader.MIN_FINDER_PATTERN_RATIO">
-            Minimum ratio 10:12 (minus 0.5 for variance), from section 7.2.7 of ISO/IEC 24724:2006. 
-        </member>
-        <member name="F:ZXing.OneD.RSS.AbstractRSSReader.MAX_FINDER_PATTERN_RATIO">
-            Maximum ratio 12:14 (plus 0.5 for variance), from section 7.2.7 of ISO/IEC 24724:2006. 
-        </member>
         <member name="M:ZXing.OneD.RSS.AbstractRSSReader.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:ZXing.OneD.RSS.AbstractRSSReader"/> class.
@@ -8222,15 +8162,6 @@
             <author>Eduardo Castillejo, University of Deusto (eduardo.castillejo@deusto.es)</author>
             </summary>
         </member>
-        <member name="F:ZXing.OneD.RSS.Expanded.RSSExpandedReader.FINDER_PATTERNS">
-            Finder pattern element widths, from section 7.2.7 of ISO/IEC 24724:2006. 
-        </member>
-        <member name="F:ZXing.OneD.RSS.Expanded.RSSExpandedReader.WEIGHTS">
-            The element weights used in the checksum calculation, from section 7.2.6 of ISO/IEC 24724:2006. 
-        </member>
-        <member name="F:ZXing.OneD.RSS.Expanded.RSSExpandedReader.FINDER_PATTERN_SEQUENCES">
-            The possible finder pattern sequences, from section 7.2.7 of ISO/IEC 24724:2006. 
-        </member>
         <member name="M:ZXing.OneD.RSS.Expanded.RSSExpandedReader.decodeRow(System.Int32,ZXing.Common.BitArray,System.Collections.Generic.IDictionary{ZXing.DecodeHintType,System.Object})">
             <summary>
               <p>Attempts to decode a one-dimensional barcode format given a single row of
@@ -8247,23 +8178,6 @@
             <summary>
             Resets this instance.
             </summary>
-        </member>
-        <member name="M:ZXing.OneD.RSS.Expanded.RSSExpandedReader.isValidSequence(System.Collections.Generic.List{ZXing.OneD.RSS.Expanded.ExpandedPair},System.Boolean)">
-            <summary>
-            Whether the pairs form a valid finder pattern sequence, either complete or a prefix
-            </summary>
-            <param name="pairs"></param>
-            <param name="complete"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ZXing.OneD.RSS.Expanded.RSSExpandedReader.mayFollow(System.Collections.Generic.List{ZXing.OneD.RSS.Expanded.ExpandedPair},System.Int32)">
-            <summary>
-            Whether the pairs, plus another pair of the specified type, would together
-            form a valid finder pattern sequence, either complete or partial
-            </summary>
-            <param name="pairs"></param>
-            <param name="value"></param>
-            <returns></returns>
         </member>
         <member name="T:ZXing.OneD.RSS.FinderPattern">
             <summary>
@@ -9793,7 +9707,7 @@
             <param name="tmpResult">Temp result.</param>
             <param name="destinationIndexes">Destination indexes.</param>
         </member>
-        <member name="M:ZXing.PDF417.Internal.Detector.findRowsWithPattern(ZXing.Common.BitMatrix,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])">
+        <member name="M:ZXing.PDF417.Internal.Detector.findRowsWithPattern(ZXing.Common.BitMatrix,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])">
             <summary>
             Finds the rows with the given pattern.
             </summary>
@@ -9803,7 +9717,6 @@
             <param name="width">Width.</param>
             <param name="startRow">Start row.</param>
             <param name="startColumn">Start column.</param>
-            <param name="minHeight"></param>
             <param name="pattern">Pattern.</param>
         </member>
         <member name="M:ZXing.PDF417.Internal.Detector.findGuardPattern(ZXing.Common.BitMatrix,System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32[])">
@@ -10377,15 +10290,6 @@
             if a different encoding would lead to a more compact encoding. When no {@code encoding} is specified
             then charsets will be chosen so that the byte representation is minimal.</param>
             <returns>the encoded message (the char values range from 0 to 928)</returns>
-        </member>
-        <member name="M:ZXing.PDF417.Internal.PDF417HighLevelEncoder.checkCharset(System.String,System.Int32,System.String)">
-            <summary>
-            Check if input is only made of characters between 0 and the upper limit 
-            </summary>
-            <param name="input">the input</param>
-            <param name="max">the upper limit for charset</param>
-            <param name="errorMessage">the message to explain the error</param>
-            <exception cref="T:ZXing.WriterException">exception highlighting the offending character and a suggestion to avoid the error</exception>
         </member>
         <member name="M:ZXing.PDF417.Internal.PDF417HighLevelEncoder.encodeText(ZXing.Common.ECIInput,System.Int32,System.Int32,System.Text.StringBuilder,System.Int32)">
              <summary>
@@ -11143,14 +11047,13 @@
             text and bytes encoded within the QR Code
             </returns>
         </member>
-        <member name="M:ZXing.QrCode.Internal.Decoder.correctErrors(System.Byte[],System.Int32,System.Int32@)">
+        <member name="M:ZXing.QrCode.Internal.Decoder.correctErrors(System.Byte[],System.Int32)">
             <summary>
               <p>Given data and error-correction codewords received, possibly corrupted by errors, attempts to
             correct the errors in-place using Reed-Solomon error correction.</p>
             </summary>
             <param name="codewordBytes">data and error correction codewords</param>
             <param name="numDataCodewords">number of codewords that are data bytes</param>
-            <param name="errorsCorrected">the number of errors corrected</param>
             <returns></returns>
         </member>
         <member name="T:ZXing.QrCode.Internal.ErrorCorrectionLevel">
@@ -11823,11 +11726,23 @@
             <returns>true if the proportions of the counts is close enough to the 1/1/3/1/1 ratios
             by finder patterns to be considered a match</returns>
         </member>
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.clearCounts(System.Int32[])">
+            <summary>
+            sets everything to 0
+            </summary>
+            <param name="counts"></param>
+        </member>
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.shiftCounts2(System.Int32[])">
+            <summary>
+            shifts left by 2 index
+            </summary>
+            <param name="stateCount"></param>
+        </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.doClearCounts(System.Int32[])">
             <summary>
             sets everything to 0
             </summary>
-            <param name="stateCount"></param>
+            <param name="counts"></param>
         </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.doShiftCounts2(System.Int32[])">
             <summary>
@@ -12564,13 +12479,6 @@
             be forced to UTF-8 by means of the <see cref="P:ZXing.QrCode.QrCodeEncodingOptions.CharacterSet"/> encoding hint.
             </summary>
         </member>
-        <member name="P:ZXing.QrCode.QrCodeEncodingOptions.QrMaskPattern">
-            <summary>
-            Specifies the QR code mask pattern to be used. Allowed values are
-            0..QRCode.NUM_MASK_PATTERNS-1. By default the code will automatically select
-            the optimal mask pattern.
-            </summary>
-        </member>
         <member name="T:ZXing.QrCode.QRCodeReader">
             <summary>
             This implementation can detect and decode QR Codes in an image.
@@ -12650,23 +12558,6 @@
             <returns>
             The generated barcode as a Matrix of unsigned bytes (0 == black, 255 == white)
             </returns>
-        </member>
-        <member name="M:ZXing.QrCode.QRCodeWriter.renderResult(ZXing.QrCode.Internal.QRCode,System.Int32,System.Int32,System.Int32,System.Boolean)">
-             <summary>
-             Renders the given <see cref="T:ZXing.QrCode.Internal.QRCode"/> as a <see cref="T:ZXing.Common.BitMatrix"/>, scaling the
-             same to be compliant with the provided dimensions.
-            
-             <p>If no scaling is required, both {@code width} and {@code height}
-             arguments should be non-positive numbers.</p>
-             </summary>
-             <param name="code">{@code QRCode} to be adapted as a {@code BitMatrix}</param>
-             <param name="width">desired width for the {@code QRCode} (in pixel units)</param>
-             <param name="height">desired height for the {@code QRCode} (in pixel units)</param>
-             <param name="quietZone">the size of the QR quiet zone (in pixel units)</param>
-             <param name="noPadding"></param>
-             <returns>{@code BitMatrix} instance</returns>
-             <exception cref="T:System.ArgumentNullException">if code is null</exception>
-             <exception cref="T:System.InvalidOperationException">if code.Matrix is null</exception>
         </member>
         <member name="T:ZXing.Reader">
             <summary>
@@ -13005,30 +12896,6 @@
         <member name="P:ZXing.Rendering.StringRenderer.Background">
             <summary> Background/blank Char. </summary>
         </member>
-        <member name="M:ZXing.Rendering.StringRenderer.Render(ZXing.Common.BitMatrix,ZXing.BarcodeFormat,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="matrix"></param>
-            <param name="format"></param>
-            <param name="content"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ZXing.Rendering.StringRenderer.Render(ZXing.Common.BitMatrix,ZXing.BarcodeFormat,System.String,ZXing.Common.EncodingOptions)">
-            <summary>
-            
-            </summary>
-            <param name="matrix"></param>
-            <param name="format"></param>
-            <param name="content"></param>
-            <param name="options"></param>
-            <returns></returns>
-        </member>
-        <member name="P:ZXing.Rendering.StringRenderer.LineFeed">
-            <summary>
-            get or set the string which should be used for line breaks
-            </summary>
-        </member>
         <member name="T:ZXing.Rendering.SvgRenderer">
             <summary>
             Renders a barcode into a Svg image
@@ -13250,7 +13117,7 @@
         </member>
         <member name="F:ZXing.ResultMetadataType.OTHER">
             <summary>
-            Unspecified, application-specific metadata. Maps to an unspecified <see cref="T:System.Object"/>.
+            Unspecified, application-specific metadata. Maps to an unspecified {@link Object}.
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.ORIENTATION">
@@ -13258,17 +13125,17 @@
             Denotes the likely approximate orientation of the barcode in the image. This value
             is given as degrees rotated clockwise from the normal, upright orientation.
             For example a 1D barcode which was found by reading top-to-bottom would be
-            said to have orientation "90". This key maps to an <see cref="T:System.Int32"/> whose
+            said to have orientation "90". This key maps to an {@link Integer} whose
             value is in the range [0,360).
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.BYTE_SEGMENTS">
             <summary>
             <p>2D barcode formats typically encode text, but allow for a sort of 'byte mode'
-            which is sometimes used to encode binary data. While <see cref="T:ZXing.Result"/> makes available
+            which is sometimes used to encode binary data. While {@link Result} makes available
             the complete raw bytes in the barcode for these formats, it does not offer the bytes
             from the byte segments alone.</p>
-            <p>This maps to a <see cref="T:System.Collections.IList"/> of byte arrays corresponding to the
+            <p>This maps to a {@link java.util.List} of byte arrays corresponding to the
             raw bytes in the byte segments in the barcode, in order.</p>
             </summary>
         </member>
@@ -13278,38 +13145,26 @@
             format, but is typically a String.
             </summary>
         </member>
-        <member name="F:ZXing.ResultMetadataType.ERRORS_CORRECTED">
-            <summary>
-            The number of errors corrected. If applicable, maps to an <see cref="T:System.Int32"/> of value
-             greater than or equal to zero.
-            </summary>
-        </member>
-        <member name="F:ZXing.ResultMetadataType.ERASURES_CORRECTED">
-            <summary>
-            The number of erasures corrected. If applicable, maps to an <see cref="T:System.Int32"/> of value
-            greater than or equal to zero.
-            </summary>
-        </member>
         <member name="F:ZXing.ResultMetadataType.ISSUE_NUMBER">
             <summary>
-            For some periodicals, indicates the issue number as an <see cref="T:System.Int32"/>.
+            For some periodicals, indicates the issue number as an {@link Integer}.
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.SUGGESTED_PRICE">
             <summary>
             For some products, indicates the suggested retail price in the barcode as a
-            formatted <see cref="T:System.String"/>.
+            formatted {@link String}.
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.POSSIBLE_COUNTRY">
             <summary>
-            For some products, the possible country of manufacture as a <see cref="T:System.String"/> denoting the
+            For some products, the possible country of manufacture as a {@link String} denoting the
             ISO country code. Some map to multiple possible countries, like "US/CA".
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.UPC_EAN_EXTENSION">
             <summary>
-            For some products, the extension text.
+            For some products, the extension text
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.STRUCTURED_APPEND_SEQUENCE">
@@ -13328,7 +13183,7 @@
         </member>
         <member name="F:ZXing.ResultMetadataType.PDF417_EXTRA_METADATA">
             <summary>
-            PDF417-specific metadata.
+            PDF417-specific metadata
             </summary>
         </member>
         <member name="F:ZXing.ResultMetadataType.AZTEC_EXTRA_METADATA">
